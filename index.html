@@ -76,7 +76,7 @@
         <!-- Navigation Buttons -->
         <div class="flex space-x-1 overflow-x-auto scrollbar-hide">
           <button
-            onclick="showSection('home')"
+            onclick="showSection('home', event)"
             class="nav-btn active px-3 sm:px-6 py-3 sm:py-4 font-semibold transition-all flex items-center justify-center"
             data-section-name="Inicio"
             data-section-icon="fa-home"
@@ -85,7 +85,7 @@
             ><span class="hidden sm:inline">Inicio</span>
           </button>
           <button
-            onclick="showSection('multiple-choice')"
+            onclick="showSection('multiple-choice', event)"
             class="nav-btn px-3 sm:px-6 py-3 sm:py-4 font-semibold transition-all flex items-center justify-center"
             data-section-name="Opción Múltiple"
             data-section-icon="fa-check-circle"
@@ -94,7 +94,7 @@
             ><span class="hidden sm:inline">Opción Múltiple</span>
           </button>
           <button
-            onclick="showSection('true-false')"
+            onclick="showSection('true-false', event)"
             class="nav-btn px-3 sm:px-6 py-3 sm:py-4 font-semibold transition-all flex items-center justify-center"
             data-section-name="Verdadero o Falso"
             data-section-icon="fa-question-circle"
@@ -103,7 +103,7 @@
             ><span class="hidden sm:inline">Verdadero/Falso</span>
           </button>
           <button
-            onclick="showSection('justification')"
+            onclick="showSection('justification', event)"
             class="nav-btn px-3 sm:px-6 py-3 sm:py-4 font-semibold transition-all flex items-center justify-center"
             data-section-name="Justificación"
             data-section-icon="fa-pen"
@@ -112,7 +112,7 @@
             ><span class="hidden sm:inline">Justificación</span>
           </button>
           <button
-            onclick="showSection('clinical-cases')"
+            onclick="showSection('clinical-cases', event)"
             class="nav-btn px-3 sm:px-6 py-3 sm:py-4 font-semibold transition-all flex items-center justify-center"
             data-section-name="Casos Clínicos"
             data-section-icon="fa-user-md"
@@ -121,7 +121,7 @@
             ><span class="hidden sm:inline">Casos Clínicos</span>
           </button>
           <button
-            onclick="showSection('statistics')"
+            onclick="showSection('statistics', event)"
             class="nav-btn px-3 sm:px-6 py-3 sm:py-4 font-semibold transition-all flex items-center justify-center"
             data-section-name="Estadísticas"
             data-section-icon="fa-chart-bar"
