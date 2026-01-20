@@ -1,0 +1,1010 @@
+/* Custom Styles */
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar hide for navigation */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  color: #4b5563;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  min-width: fit-content;
+}
+
+.nav-btn:hover {
+  color: #2563eb;
+  background-color: #f3f4f6;
+}
+
+.nav-btn.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+  background-color: #eff6ff;
+}
+
+/* Mobile Section Indicator */
+#mobile-section-name {
+  animation: fadeInSection 0.3s ease-in-out;
+}
+
+#mobile-section-icon {
+  animation: scaleIn 0.3s ease-in-out;
+}
+
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: white;
+  color: #4b5563;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: 2px solid #e5e7eb;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Option Buttons */
+.option-btn {
+  background: white;
+  border: 2px solid #e5e7eb;
+  padding: 16px 20px;
+  border-radius: 12px;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.option-btn:hover:not(:disabled) {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  transform: translateX(5px);
+}
+
+.option-btn.selected {
+  border-color: #3b82f6;
+  background: #dbeafe;
+  font-weight: 600;
+}
+
+.option-btn.correct {
+  border-color: #10b981;
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.option-btn.incorrect {
+  border-color: #ef4444;
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.option-btn:disabled {
+  cursor: not-allowed;
+}
+
+/* True/False Buttons */
+.tf-btn {
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.tf-btn-true {
+  background: white;
+  color: #10b981;
+  border-color: #10b981;
+}
+
+.tf-btn-true:hover {
+  background: #d1fae5;
+}
+
+.tf-btn-false {
+  background: white;
+  color: #ef4444;
+  border-color: #ef4444;
+}
+
+.tf-btn-false:hover {
+  background: #fee2e2;
+}
+
+.tf-btn.selected {
+  transform: scale(1.05);
+}
+
+.tf-btn.correct {
+  background: #d1fae5;
+  border-color: #10b981;
+}
+
+.tf-btn.incorrect {
+  background: #fee2e2;
+  border-color: #ef4444;
+}
+
+/* Feedback Messages */
+.feedback {
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 20px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.feedback-correct {
+  background: #d1fae5;
+  border: 2px solid #10b981;
+  color: #065f46;
+}
+
+.feedback-incorrect {
+  background: #fee2e2;
+  border: 2px solid #ef4444;
+  color: #991b1b;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Textarea */
+.justification-textarea {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s;
+  min-height: 150px;
+  resize: vertical;
+}
+
+.justification-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Clinical Case Card */
+.case-card {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-left: 5px solid #f59e0b;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.patient-info {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.patient-info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.patient-info-item:last-child {
+  border-bottom: none;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.badge-success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-info {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* Progress Bar */
+.progress-section {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 16px;
+}
+
+.progress-bar {
+  background: #e5e7eb;
+  height: 8px;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+/* Hidden Class */
+.hidden {
+  display: none !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-content {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Responsive Design - Mobile First Approach */
+
+/* Extra Small Devices (Phones, 320px - 575px) */
+@media (max-width: 575px) {
+  /* Mobile Section Indicator */
+  #mobile-section-name {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  #mobile-section-icon {
+    font-size: 16px;
+  }
+
+  /* Navigation */
+  .nav-btn {
+    font-size: 11px;
+    padding: 8px 6px;
+    flex-direction: column;
+    gap: 4px;
+    min-width: auto;
+  }
+
+  .nav-btn i {
+    font-size: 16px;
+  }
+
+  /* Hide text on very small screens, show only icons */
+  .nav-btn span {
+    display: none !important;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 20px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+
+  h3 {
+    font-size: 16px !important;
+  }
+
+  h4 {
+    font-size: 14px !important;
+  }
+
+  /* Buttons */
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 16px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .btn-primary i,
+  .btn-secondary i {
+    font-size: 12px;
+  }
+
+  /* Option Buttons */
+  .option-btn {
+    font-size: 13px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+  }
+
+  .tf-btn {
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  /* Cards and Containers */
+  .bg-white {
+    padding: 16px !important;
+    border-radius: 12px;
+  }
+
+  /* Navigation Controls */
+  .mt-8 {
+    margin-top: 20px !important;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .mt-8 > button {
+    flex: 1 1 auto;
+    min-width: 80px;
+  }
+
+  /* Hide "Pasar" button text on very small screens */
+  .mt-8 > button:nth-child(2) {
+    padding: 10px 12px;
+  }
+
+  /* Score Display */
+  .text-center {
+    min-width: 80px;
+  }
+
+  .text-3xl {
+    font-size: 20px !important;
+  }
+
+  .text-2xl {
+    font-size: 18px !important;
+  }
+
+  .text-xl {
+    font-size: 16px !important;
+  }
+
+  /* Feedback Messages */
+  .feedback {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  /* Case Cards */
+  .case-card {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  /* Statistics Grid */
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  /* Badges */
+  .badge {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  /* Spacing */
+  .p-8 {
+    padding: 16px !important;
+  }
+
+  .p-6 {
+    padding: 12px !important;
+  }
+
+  .mb-6 {
+    margin-bottom: 16px !important;
+  }
+
+  .space-y-4 > * + * {
+    margin-top: 12px !important;
+  }
+}
+
+/* Small Devices (Tablets, 576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Mobile Section Indicator - Show on small tablets too */
+  #mobile-section-name {
+    font-size: 14px;
+  }
+
+  /* Navigation */
+  .nav-btn {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  /* Show text on small tablets */
+  .nav-btn span {
+    display: inline !important;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 24px !important;
+  }
+
+  h2 {
+    font-size: 22px !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+
+  /* Buttons */
+  .btn-primary,
+  .btn-secondary {
+    padding: 11px 18px;
+    font-size: 14px;
+  }
+
+  /* Option Buttons */
+  .option-btn {
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+
+  /* Cards */
+  .bg-white {
+    padding: 20px !important;
+  }
+
+  /* Navigation Controls */
+  .mt-8 {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  /* Statistics Grid */
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Medium Devices (Tablets, 768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav-btn {
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+
+  /* Show full text on tablets */
+  .nav-btn span {
+    display: inline !important;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  .option-btn {
+    font-size: 15px;
+    padding: 15px 18px;
+  }
+
+  .bg-white {
+    padding: 24px !important;
+  }
+
+  /* Statistics Grid */
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Large Devices (Desktops, 992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav-btn {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  /* Show full text on desktop */
+  .nav-btn span {
+    display: inline !important;
+  }
+
+  /* Statistics Grid */
+  .grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Extra Large Devices (Large Desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .nav-btn {
+    font-size: 15px;
+    padding: 14px 20px;
+  }
+
+  /* Show full text on large desktop */
+  .nav-btn span {
+    display: inline !important;
+  }
+
+  /* Statistics Grid */
+  .grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  /* Max width for better readability */
+  .max-w-4xl {
+    max-width: 56rem;
+  }
+
+  .max-w-5xl {
+    max-width: 64rem;
+  }
+}
+
+/* Landscape Orientation for Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .nav-btn {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  h1,
+  h2 {
+    font-size: 18px !important;
+  }
+
+  .bg-white {
+    padding: 12px !important;
+  }
+
+  .mt-8 {
+    margin-top: 12px !important;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Touch-friendly interactions for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .option-btn,
+  .tf-btn,
+  .btn-primary,
+  .btn-secondary {
+    min-height: 44px; /* iOS recommended touch target */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-btn {
+    min-height: 48px;
+  }
+}
+
+/* Improved Focus States for Accessibility */
+@media (prefers-reduced-motion: no-preference) {
+  .option-btn:focus,
+  .btn-primary:focus,
+  .btn-secondary:focus {
+    outline: 3px solid #3b82f6;
+    outline-offset: 2px;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .option-btn,
+  .tf-btn {
+    border-width: 3px;
+  }
+
+  .btn-primary {
+    border: 2px solid #1e40af;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .nav-btn,
+  button,
+  footer {
+    display: none;
+  }
+
+  body {
+    background: white;
+  }
+
+  .bg-gradient-to-br {
+    background: white !important;
+  }
+}
+
+/* Utility Classes for Responsive Spacing */
+@media (max-width: 640px) {
+  .responsive-padding {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .responsive-margin {
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+  }
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Flexible Grid Layout */
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* Better text wrapping */
+.option-btn,
+.tf-btn,
+.feedback {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+.option-btn,
+.tf-btn {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Additional Mobile Optimizations */
+
+/* Improve button gap spacing on mobile */
+@media (max-width: 640px) {
+  .mt-8.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px !important;
+    justify-content: space-between;
+  }
+
+  .mt-8 .btn-primary,
+  .mt-8 .btn-secondary {
+    flex: 1 1 calc(50% - 4px);
+    min-width: 90px;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  /* Make skip button smaller on very small screens */
+  .mt-8 .btn-secondary.bg-yellow-500 {
+    flex: 0 1 auto;
+    min-width: 70px;
+  }
+
+  /* Center score display */
+  .mt-8 .text-center {
+    flex: 1 1 100%;
+    order: -1;
+    margin-bottom: 10px;
+  }
+}
+
+/* Improve nav button visibility */
+@media (max-width: 480px) {
+  .nav-btn {
+    font-size: 10px;
+    padding: 8px 4px;
+  }
+
+  .nav-btn i {
+    font-size: 14px;
+    margin: 0 !important;
+  }
+
+  /* Show only icons on very small screens */
+  .nav-btn span {
+    display: none;
+  }
+
+  .nav-btn {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+
+/* Better case card responsiveness */
+@media (max-width: 640px) {
+  .case-card {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .patient-info {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .patient-info-item {
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px 0;
+  }
+}
+
+/* Optimize feedback messages for mobile */
+@media (max-width: 640px) {
+  .feedback {
+    padding: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .feedback i {
+    font-size: 20px;
+  }
+}
+
+/* Better grid layouts for statistics */
+@media (max-width: 640px) {
+  .grid.gap-6 {
+    gap: 12px;
+  }
+
+  .grid.gap-4 {
+    gap: 8px;
+  }
+}
+
+/* Improved modal responsiveness */
+@media (max-width: 640px) {
+  #completionModal {
+    padding: 20px;
+  }
+
+  #completionModal > div {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+}
+
+/* Better textarea sizing */
+@media (max-width: 640px) {
+  .justification-textarea {
+    min-height: 120px;
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+/* Optimize badges */
+@media (max-width: 640px) {
+  .badge {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+}
+
+/* Better header spacing */
+@media (max-width: 640px) {
+  header .container {
+    padding: 12px 16px;
+  }
+}
+
+/* Improve scrolling experience */
+html {
+  scroll-padding-top: 100px;
+}
+
+/* Ensure proper aspect ratio for cards */
+.case-card,
+.patient-info,
+.feedback {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Add subtle animations for better UX */
+@media (prefers-reduced-motion: no-preference) {
+  .option-btn,
+  .tf-btn,
+  .btn-primary,
+  .btn-secondary {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .option-btn:active,
+  .tf-btn:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Landscape specific optimizations */
+@media (max-height: 600px) and (orientation: landscape) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav {
+    position: sticky;
+    top: 60px;
+  }
+
+  main {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+/* Ultra-wide screen optimization */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* Fix for iOS Safari bottom bar */
+@supports (-webkit-touch-callout: none) {
+  main {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
+}
+
+/* Better contrast for accessibility */
+@media (prefers-contrast: more) {
+  .option-btn,
+  .tf-btn {
+    border-width: 3px;
+  }
+
+  .btn-primary {
+    font-weight: 700;
+  }
+
+  .feedback {
+    border-width: 3px;
+  }
+}

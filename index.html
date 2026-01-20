@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <meta
+      name="description"
+      content="Plataforma interactiva de estudio de Pediatría Neonatal con ejercicios, casos clínicos y seguimiento de progreso"
+    />
+    <meta name="theme-color" content="#2563eb" />
+    <title>Estudio de Pediatría</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Header -->
+    <header
+      class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg"
+    >
+      <div class="container mx-auto px-3 sm:px-4 lg:px-6 py-4 sm:py-6">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0"
+        >
+          <div class="flex items-center space-x-2 sm:space-x-3">
+            <i class="fas fa-stethoscope text-2xl sm:text-3xl"></i>
+            <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold">Pediatría</h1>
+          </div>
+          <div class="flex items-center gap-3 sm:gap-4">
+            <div class="text-center sm:text-right">
+              <p class="text-xs sm:text-sm opacity-90">Progreso Total</p>
+              <p class="text-lg sm:text-xl font-bold">
+                <span id="totalProgress">0</span>%
+              </p>
+            </div>
+            <div class="text-center sm:text-right">
+              <p class="text-xs sm:text-sm opacity-90">Puntuación</p>
+              <p class="text-lg sm:text-xl font-bold">
+                <span id="totalScore">0</span> pts
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-2 sm:px-4">
+        <!-- Mobile Section Indicator -->
+        <div
+          class="block lg:hidden bg-gradient-to-r from-blue-50 to-indigo-50 px-3 py-2 border-b border-blue-100"
+        >
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <i
+                id="mobile-section-icon"
+                class="fas fa-home text-blue-600 text-lg"
+              ></i>
+              <span
+                id="mobile-section-name"
+                class="text-sm font-semibold text-gray-700"
+                >Inicio</span
+              >
+            </div>
+            <span class="text-xs text-gray-500">Sección Actual</span>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex space-x-1 overflow-x-auto scrollbar-hide">
+          <button
+            onclick="showSection('home')"
+            class="nav-btn active px-3 sm:px-6 py-3 sm:py-4 font-semibold transition-all flex items-center justify-center"
+            data-section-name="Inicio"
+            data-section-icon="fa-home"
+          >
+            <i class="fas fa-home mr-1 sm:mr-2"></i
+            ><span class="hidden sm:inline">Inicio</span>
+          </button>
+          <button
+            onclick="showSection('multiple-choice')"
+            class="nav-btn px-3 sm:px-6 py-3 sm:py-4 font-semibold transition-all flex items-center justify-center"
+            data-section-name="Opción Múltiple"
+            data-section-icon="fa-check-circle"
+          >
+            <i class="fas fa-check-circle mr-1 sm:mr-2"></i
+            ><span class="hidden sm:inline">Opción Múltiple</span>
+          </button>
+          <button
+            onclick="showSection('true-false')"
+            class="nav-btn px-3 sm:px-6 py-3 sm:py-4 font-semibold transition-all flex items-center justify-center"
+            data-section-name="Verdadero o Falso"
+            data-section-icon="fa-question-circle"
+          >
+            <i class="fas fa-question-circle mr-1 sm:mr-2"></i
+            ><span class="hidden sm:inline">Verdadero/Falso</span>
+          </button>
+          <button
+            onclick="showSection('justification')"
+            class="nav-btn px-3 sm:px-6 py-3 sm:py-4 font-semibold transition-all flex items-center justify-center"
+            data-section-name="Justificación"
+            data-section-icon="fa-pen"
+          >
+            <i class="fas fa-pen mr-1 sm:mr-2"></i
+            ><span class="hidden sm:inline">Justificación</span>
+          </button>
+          <button
+            onclick="showSection('clinical-cases')"
+            class="nav-btn px-3 sm:px-6 py-3 sm:py-4 font-semibold transition-all flex items-center justify-center"
+            data-section-name="Casos Clínicos"
+            data-section-icon="fa-user-md"
+          >
+            <i class="fas fa-user-md mr-1 sm:mr-2"></i
+            ><span class="hidden sm:inline">Casos Clínicos</span>
+          </button>
+          <button
+            onclick="showSection('statistics')"
+            class="nav-btn px-3 sm:px-6 py-3 sm:py-4 font-semibold transition-all flex items-center justify-center"
+            data-section-name="Estadísticas"
+            data-section-icon="fa-chart-bar"
+          >
+            <i class="fas fa-chart-bar mr-1 sm:mr-2"></i
+            ><span class="hidden sm:inline">Estadísticas</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-3 sm:px-4 lg:px-6 py-4 sm:py-8">
+      <!-- Home Section -->
+      <section id="home-section" class="section-content">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-xl shadow-xl p-8 mb-8">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">
+              Bienvenido a tu lugar de estudio de Pediatría
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Esta aplicación está diseñada para ayudarte a dominar los
+              conceptos de pediatría a través de ejercicios interactivos y casos
+              clínicos basados en el contenido dado por tus profesores.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 mt-8">
+              <div
+                class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-6 text-white"
+              >
+                <i class="fas fa-graduation-cap text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2">Aprende Practicando</h3>
+                <p class="opacity-90">
+                  Refuerza tus conocimientos con ejercicios variados
+                </p>
+              </div>
+              <div
+                class="bg-gradient-to-br from-green-500 to-green-600 rounded-lg p-6 text-white"
+              >
+                <i class="fas fa-clipboard-check text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2">Evaluación Continua</h3>
+                <p class="opacity-90">Obtén retroalimentación inmediata</p>
+              </div>
+              <div
+                class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg p-6 text-white"
+              >
+                <i class="fas fa-hospital text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2">Casos Clínicos</h3>
+                <p class="opacity-90">Practica con situaciones reales</p>
+              </div>
+              <div
+                class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg p-6 text-white"
+              >
+                <i class="fas fa-chart-line text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold mb-2">Seguimiento</h3>
+                <p class="opacity-90">Monitorea tu progreso</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-xl p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Secciones Disponibles
+            </h3>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-4 p-4 bg-blue-50 rounded-lg">
+                <i class="fas fa-check-circle text-blue-600 text-2xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg text-gray-800">
+                    Opción Múltiple
+                  </h4>
+                  <p class="text-gray-600">
+                    Selecciona la respuesta correcta entre varias opciones.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-start space-x-4 p-4 bg-green-50 rounded-lg"
+              >
+                <i
+                  class="fas fa-question-circle text-green-600 text-2xl mt-1"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-lg text-gray-800">
+                    Verdadero o Falso
+                  </h4>
+                  <p class="text-gray-600">
+                    Determina si las afirmaciones son correctas o incorrectas.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-start space-x-4 p-4 bg-purple-50 rounded-lg"
+              >
+                <i class="fas fa-pen text-purple-600 text-2xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg text-gray-800">Justificación</h4>
+                  <p class="text-gray-600">
+                    Explica y justifica tus respuestas con argumentos sólidos.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4 p-4 bg-red-50 rounded-lg">
+                <i class="fas fa-user-md text-red-600 text-2xl mt-1"></i>
+                <div>
+                  <h4 class="font-bold text-lg text-gray-800">
+                    Casos Clínicos
+                  </h4>
+                  <p class="text-gray-600">
+                    Resuelve situaciones clínicas reales con pacientes
+                    pediátricos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Multiple Choice Section -->
+      <section id="multiple-choice-section" class="section-content hidden">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-xl shadow-xl p-8">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-3xl font-bold text-gray-800">
+                <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                Opción Múltiple
+              </h2>
+              <div class="text-right">
+                <p class="text-sm text-gray-600">Pregunta</p>
+                <p class="text-2xl font-bold text-blue-600">
+                  <span id="mc-current">1</span>/<span id="mc-total">0</span>
+                </p>
+              </div>
+            </div>
+
+            <div id="mc-quiz-container"></div>
+
+            <div class="mt-8 flex justify-between items-center gap-4">
+              <button
+                onclick="previousMCQuestion()"
+                id="mc-prev-btn"
+                class="btn-secondary"
+                disabled
+              >
+                <i class="fas fa-arrow-left mr-2"></i>Anterior
+              </button>
+              <button
+                onclick="skipMCQuestion()"
+                class="btn-secondary bg-yellow-500 hover:bg-yellow-600 text-white"
+                title="Saltar a la siguiente pregunta sin responder"
+              >
+                <i class="fas fa-forward mr-2"></i>Pasar
+              </button>
+              <div class="text-center">
+                <p class="text-gray-600">Puntuación</p>
+                <p class="text-3xl font-bold text-blue-600">
+                  <span id="mc-score">0</span> pts
+                </p>
+              </div>
+              <button
+                onclick="nextMCQuestion()"
+                id="mc-next-btn"
+                class="btn-primary"
+              >
+                Siguiente<i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- True/False Section -->
+      <section id="true-false-section" class="section-content hidden">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-xl shadow-xl p-8">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-3xl font-bold text-gray-800">
+                <i class="fas fa-question-circle text-green-600 mr-2"></i>
+                Verdadero o Falso
+              </h2>
+              <div class="text-right">
+                <p class="text-sm text-gray-600">Pregunta</p>
+                <p class="text-2xl font-bold text-green-600">
+                  <span id="tf-current">1</span>/<span id="tf-total">0</span>
+                </p>
+              </div>
+            </div>
+
+            <div id="tf-quiz-container"></div>
+
+            <div class="mt-8 flex justify-between items-center gap-4">
+              <button
+                onclick="previousTFQuestion()"
+                id="tf-prev-btn"
+                class="btn-secondary"
+                disabled
+              >
+                <i class="fas fa-arrow-left mr-2"></i>Anterior
+              </button>
+              <button
+                onclick="skipTFQuestion()"
+                class="btn-secondary bg-yellow-500 hover:bg-yellow-600 text-white"
+                title="Saltar a la siguiente pregunta sin responder"
+              >
+                <i class="fas fa-forward mr-2"></i>Pasar
+              </button>
+              <div class="text-center">
+                <p class="text-gray-600">Puntuación</p>
+                <p class="text-3xl font-bold text-green-600">
+                  <span id="tf-score">0</span> pts
+                </p>
+              </div>
+              <button
+                onclick="nextTFQuestion()"
+                id="tf-next-btn"
+                class="btn-primary"
+              >
+                Siguiente<i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Justification Section -->
+      <section id="justification-section" class="section-content hidden">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-xl shadow-xl p-8">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-3xl font-bold text-gray-800">
+                <i class="fas fa-pen text-purple-600 mr-2"></i>
+                Ejercicios de Justificación
+              </h2>
+              <div class="text-right">
+                <p class="text-sm text-gray-600">Ejercicio</p>
+                <p class="text-2xl font-bold text-purple-600">
+                  <span id="just-current">1</span>/<span id="just-total"
+                    >0</span
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div id="just-container"></div>
+
+            <div class="mt-8 flex justify-between items-center gap-4">
+              <button
+                onclick="previousJustQuestion()"
+                id="just-prev-btn"
+                class="btn-secondary"
+                disabled
+              >
+                <i class="fas fa-arrow-left mr-2"></i>Anterior
+              </button>
+              <button
+                onclick="skipJustQuestion()"
+                class="btn-secondary bg-yellow-500 hover:bg-yellow-600 text-white"
+                title="Saltar al siguiente ejercicio sin responder"
+              >
+                <i class="fas fa-forward mr-2"></i>Pasar
+              </button>
+              <div class="text-center">
+                <p class="text-gray-600">Puntuación</p>
+                <p class="text-3xl font-bold text-purple-600">
+                  <span id="just-score">0</span> pts
+                </p>
+              </div>
+              <button
+                onclick="nextJustQuestion()"
+                id="just-next-btn"
+                class="btn-primary"
+              >
+                Siguiente<i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clinical Cases Section -->
+      <section id="clinical-cases-section" class="section-content hidden">
+        <div class="max-w-5xl mx-auto">
+          <div class="bg-white rounded-xl shadow-xl p-8">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-3xl font-bold text-gray-800">
+                <i class="fas fa-user-md text-red-600 mr-2"></i>
+                Casos Clínicos
+              </h2>
+              <div class="text-right">
+                <p class="text-sm text-gray-600">Caso</p>
+                <p class="text-2xl font-bold text-red-600">
+                  <span id="case-current">1</span>/<span id="case-total"
+                    >0</span
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div id="case-container"></div>
+
+            <div class="mt-8 flex justify-between items-center gap-4">
+              <button
+                onclick="previousCase()"
+                id="case-prev-btn"
+                class="btn-secondary"
+                disabled
+              >
+                <i class="fas fa-arrow-left mr-2"></i>Caso Anterior
+              </button>
+              <button
+                onclick="skipCase()"
+                class="btn-secondary bg-yellow-500 hover:bg-yellow-600 text-white"
+                title="Saltar al siguiente caso sin responder"
+              >
+                <i class="fas fa-forward mr-2"></i>Pasar
+              </button>
+              <div class="text-center">
+                <p class="text-gray-600">Puntuación</p>
+                <p class="text-3xl font-bold text-red-600">
+                  <span id="case-score">0</span> pts
+                </p>
+              </div>
+              <button
+                onclick="nextCase()"
+                id="case-next-btn"
+                class="btn-primary"
+              >
+                Siguiente Caso<i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics Section -->
+      <section id="statistics-section" class="section-content hidden">
+        <div class="max-w-5xl mx-auto">
+          <div class="bg-white rounded-xl shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+              <i class="fas fa-chart-bar text-indigo-600 mr-2"></i>
+              Estadísticas de Rendimiento
+            </h2>
+
+            <div class="grid md:grid-cols-4 gap-6 mb-8">
+              <div
+                class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-6 text-white"
+              >
+                <i class="fas fa-check-circle text-3xl mb-2"></i>
+                <p class="text-sm opacity-90">Opción Múltiple</p>
+                <p class="text-3xl font-bold"><span id="stat-mc">0</span>%</p>
+              </div>
+              <div
+                class="bg-gradient-to-br from-green-500 to-green-600 rounded-lg p-6 text-white"
+              >
+                <i class="fas fa-question-circle text-3xl mb-2"></i>
+                <p class="text-sm opacity-90">Verdadero/Falso</p>
+                <p class="text-3xl font-bold"><span id="stat-tf">0</span>%</p>
+              </div>
+              <div
+                class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg p-6 text-white"
+              >
+                <i class="fas fa-pen text-3xl mb-2"></i>
+                <p class="text-sm opacity-90">Justificación</p>
+                <p class="text-3xl font-bold"><span id="stat-just">0</span>%</p>
+              </div>
+              <div
+                class="bg-gradient-to-br from-red-500 to-red-600 rounded-lg p-6 text-white"
+              >
+                <i class="fas fa-user-md text-3xl mb-2"></i>
+                <p class="text-sm opacity-90">Casos Clínicos</p>
+                <p class="text-3xl font-bold"><span id="stat-case">0</span>%</p>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">
+                Resumen General
+              </h3>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-gray-700">Progreso Total</span>
+                    <span class="font-bold text-gray-800"
+                      ><span id="stat-total-progress">0</span>%</span
+                    >
+                  </div>
+                  <div class="w-full bg-gray-300 rounded-full h-3">
+                    <div
+                      id="stat-progress-bar"
+                      class="bg-gradient-to-r from-blue-500 to-indigo-600 h-3 rounded-full transition-all"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-700"
+                    >Total de Preguntas Respondidas</span
+                  >
+                  <span class="font-bold text-gray-800"
+                    ><span id="stat-answered">0</span></span
+                  >
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-700">Respuestas Correctas</span>
+                  <span class="font-bold text-green-600"
+                    ><span id="stat-correct">0</span></span
+                  >
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-700">Respuestas Incorrectas</span>
+                  <span class="font-bold text-red-600"
+                    ><span id="stat-incorrect">0</span></span
+                  >
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-700">Puntuación Total</span>
+                  <span class="font-bold text-indigo-600 text-xl"
+                    ><span id="stat-total-score">0</span> puntos</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button
+                onclick="resetProgress()"
+                class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-semibold transition-all"
+              >
+                <i class="fas fa-redo mr-2"></i>Reiniciar Todo el Progreso
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-sm text-gray-400 mt-2">
+          Diseñado específicamente para estudiantes de medicina de Santa Clara.
+        </p>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
