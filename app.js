@@ -758,19 +758,17 @@ function showCompletionModal() {
   `;
 
   modalContent.innerHTML = `
-    <div style="font-size: 80px; margin-bottom: 20px;">🎉💝🏆</div>
+    <div style="font-size: 80px; margin-bottom: 20px;">🎉🏆✨</div>
     <h2 style="color: white; font-size: 36px; margin-bottom: 20px; font-weight: bold;">
       ¡FELICIDADES!
     </h2>
     <div style="background: white; padding: 30px; border-radius: 15px; margin-bottom: 25px;">
       <p style="color: #667eea; font-size: 24px; font-weight: bold; margin-bottom: 15px;">
-        ¡Has completado todos los ejercicios!
+        Has completado el 100% del progreso
       </p>
-      <div style="font-size: 60px; margin: 20px 0;">💕🍫👩‍⚕️</div>
-      <p style="color: #764ba2; font-size: 20px; line-height: 1.8; font-weight: 500;">
-        Te has ganado un beso y un chocolate de tu novio.<br>
-        <strong style="font-size: 24px; color: #667eea;">Eres perfecta</strong><br>
-        <strong style="font-size: 24px; color: #764ba2;">Serás una gran doctora ❤️</strong>
+      <div style="font-size: 60px; margin: 20px 0;">�🌟�</div>
+      <p style="color: #764ba2; font-size: 28px; line-height: 1.8; font-weight: bold;">
+        ¡Ahora a coger 5! 🙌
       </p>
     </div>
     <button onclick="closeCompletionModal()" style="
@@ -785,7 +783,7 @@ function showCompletionModal() {
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
     " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      ❤️ ¡Gracias, amor! ❤️
+      ✨ ¡Entendido! ✨
     </button>
   `;
 

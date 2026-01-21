@@ -803,6 +803,557 @@ const multipleChoiceQuestions = [
     explanation:
       "La fenilcetonuria (PKU) es deficiencia de fenilalanina hidroxilasa: acumula fenilalanina (tóxica para cerebro) y déficit de tirosina. Sin tratamiento: discapacidad intelectual severa, convulsiones, eczema, olor a ratón. Tratamiento: dieta baja en fenilalanina de por vida.",
   },
+  // NUEVAS PREGUNTAS AGREGADAS - MEZCLADAS POR ESPECIALIDADES
+  // CARDIOLOGÍA
+  {
+    id: 61,
+    question:
+      "¿Cuál es la manifestación clínica principal de la coartación de aorta?",
+    options: [
+      "Cianosis generalizada",
+      "Pulsos femorales débiles o ausentes",
+      "Soplo sistólico en borde esternal izquierdo",
+      "Insuficiencia respiratoria aguda",
+    ],
+    correct: 1,
+    explanation:
+      "La coartación de aorta se caracteriza por pulsos femorales débiles o ausentes, con diferencia de presión arterial entre extremidades superiores e inferiores. Puede presentarse con insuficiencia cardíaca en neonatos cuando cierra el conducto arterioso.",
+  },
+  // GASTROENTEROLOGÍA
+  {
+    id: 62,
+    question:
+      "¿Cuál es el tratamiento definitivo de la atresia de vías biliares?",
+    options: [
+      "Tratamiento médico con ácido ursodesoxicólico",
+      "Procedimiento de Kasai (portoenterostomía)",
+      "Colocación de stent biliar",
+      "Trasplante hepático inmediato",
+    ],
+    correct: 1,
+    explanation:
+      "El procedimiento de Kasai debe realizarse antes de los 60 días de vida, idealmente antes de los 45 días. Si falla, el trasplante hepático es la opción definitiva. El éxito del Kasai disminuye significativamente después de los 60 días.",
+  },
+  // NEUROLOGÍA
+  {
+    id: 63,
+    question:
+      "¿Cuál es el tratamiento neuroprotector para la encefalopatía hipóxico-isquémica moderada-severa?",
+    options: [
+      "Corticoides en altas dosis",
+      "Hipotermia terapéutica",
+      "Oxigenoterapia hiperbárica",
+      "Manitol",
+    ],
+    correct: 1,
+    explanation:
+      "La hipotermia terapéutica (33.5-34.5°C durante 72 horas) iniciada en las primeras 6 horas de vida mejora significativamente el pronóstico neurológico en encefalopatía hipóxico-isquémica moderada-severa, reduciendo mortalidad y discapacidad.",
+  },
+  // HEMATOLOGÍA
+  {
+    id: 64,
+    question:
+      "¿Cuál es la dosis de vitamina K profiláctica que se administra al nacimiento?",
+    options: [
+      "0.5 mg intramuscular",
+      "1 mg intramuscular",
+      "2 mg intramuscular",
+      "5 mg oral",
+    ],
+    correct: 1,
+    explanation:
+      "Se administra 1 mg de vitamina K intramuscular al nacimiento para prevenir la enfermedad hemorrágica del recién nacido. La vía intramuscular es superior a la oral porque proporciona protección más prolongada y efectiva.",
+  },
+  // RENAL
+  {
+    id: 65,
+    question: "¿Cuándo se considera que un recién nacido tiene oliguria?",
+    options: [
+      "Diuresis < 0.5 mL/kg/hora",
+      "Diuresis < 1 mL/kg/hora",
+      "Diuresis < 2 mL/kg/hora",
+      "Diuresis < 3 mL/kg/hora",
+    ],
+    correct: 1,
+    explanation:
+      "Se define oliguria neonatal como una diuresis menor a 1 mL/kg/hora después de las primeras 24 horas de vida. La diuresis normal es de 1-3 mL/kg/hora.",
+  },
+  // CIRUGÍA
+  {
+    id: 66,
+    question:
+      "¿Cuál es el signo radiológico característico de la atresia duodenal?",
+    options: [
+      "Signo de la doble burbuja",
+      "Neumatosis intestinal",
+      "Calcificaciones hepáticas",
+      "Patrón de vidrio esmerilado",
+    ],
+    correct: 0,
+    explanation:
+      "El signo de la doble burbuja en la radiografía abdominal es patognomónico de atresia duodenal, mostrando dilatación gástrica y del duodeno proximal con ausencia de gas distal.",
+  },
+  // RESPIRATORIO
+  {
+    id: 67,
+    question:
+      "¿Cuál es la saturación de oxígeno objetivo en un recién nacido prematuro para prevenir retinopatía?",
+    options: ["85-89%", "90-95%", "96-100%", "80-85%"],
+    correct: 1,
+    explanation:
+      "En prematuros, se debe mantener la saturación de oxígeno entre 90-95% para prevenir tanto la hipoxia como la retinopatía del prematuro por hiperoxia. La hiperoxia puede causar vasoconstricción retiniana y posterior neovascularización.",
+  },
+  // ENDOCRINOLOGÍA
+  {
+    id: 68,
+    question: "¿Cuál es el valor de glucosa que define hipoglucemia neonatal?",
+    options: ["< 70 mg/dL", "< 60 mg/dL", "< 45 mg/dL", "< 30 mg/dL"],
+    correct: 2,
+    explanation:
+      "Se define hipoglucemia neonatal como glucosa plasmática < 45 mg/dL en las primeras 24 horas o < 50 mg/dL después de las 24 horas de vida. Debe tratarse incluso si es asintomática para prevenir daño neurológico.",
+  },
+  // ATENCIÓN PRIMARIA
+  {
+    id: 69,
+    question:
+      "¿Cuál es el aumento de peso esperado en un lactante durante el primer mes de vida?",
+    options: [
+      "10-15 gramos/día",
+      "20-30 gramos/día",
+      "40-50 gramos/día",
+      "60-80 gramos/día",
+    ],
+    correct: 1,
+    explanation:
+      "El lactante normal gana aproximadamente 20-30 gramos por día durante el primer mes, recuperando el peso del nacimiento hacia los 10-14 días. Duplica su peso al nacer alrededor de los 4-5 meses.",
+  },
+  // CARDIOLOGÍA
+  {
+    id: 70,
+    question:
+      "¿Cuál es el tratamiento farmacológico inicial para mantener abierto el conducto arterioso en cardiopatías ductus-dependientes?",
+    options: ["Indometacina", "Ibuprofeno", "Prostaglandina E1", "Furosemida"],
+    correct: 2,
+    explanation:
+      "La prostaglandina E1 (PGE1) mantiene abierto el conducto arterioso en cardiopatías ductus-dependientes hasta la corrección quirúrgica. Se usa en cardiopatías que dependen del conducto para flujo pulmonar o sistémico.",
+  },
+  // GASTROENTEROLOGÍA
+  {
+    id: 71,
+    question:
+      "¿Cuál es la característica del vómito en la estenosis pilórica hipertrófica?",
+    options: [
+      "Vómito bilioso y explosivo",
+      "Vómito no bilioso en proyectil",
+      "Regurgitaciones leves",
+      "Hematemesis",
+    ],
+    correct: 1,
+    explanation:
+      "La estenosis pilórica hipertrófica se caracteriza por vómitos no biliosos en proyectil que aparecen entre las 3-6 semanas de vida. El lactante queda hambriento después de vomitar y puede palparse masa en forma de oliva en epigastrio.",
+  },
+  // NEUROLOGÍA
+  {
+    id: 72,
+    question:
+      "¿Cuál es el tratamiento de primera línea para las convulsiones neonatales?",
+    options: [
+      "Diazepam intravenoso",
+      "Fenobarbital",
+      "Levetiracetam",
+      "Fenitoína",
+    ],
+    correct: 1,
+    explanation:
+      "El fenobarbital es el anticonvulsivante de primera línea en convulsiones neonatales, con dosis de carga de 20 mg/kg IV. Si no controla, se puede usar fenitoína o levetiracetam como segunda línea.",
+  },
+  // HEMATOLOGÍA
+  {
+    id: 73,
+    question:
+      "¿A qué edad aparece típicamente la anemia fisiológica del lactante?",
+    options: ["1-2 semanas", "2-3 meses", "4-6 meses", "9-12 meses"],
+    correct: 1,
+    explanation:
+      "La anemia fisiológica del lactante aparece entre los 2-3 meses en niños a término y a las 6-12 semanas en prematuros. Es autolimitada y se debe a la transición de hemoglobina fetal a hemoglobina adulta.",
+  },
+  // RENAL
+  {
+    id: 74,
+    question:
+      "¿Cuál es la causa más común de masa abdominal palpable en un recién nacido?",
+    options: [
+      "Neuroblastoma",
+      "Tumor de Wilms",
+      "Hidronefrosis o displasia renal multiquística",
+      "Teratoma",
+    ],
+    correct: 2,
+    explanation:
+      "Las patologías renales (hidronefrosis, displasia multiquística) son las causas más frecuentes de masa abdominal palpable en el período neonatal, representando el 50-60% de todas las masas abdominales neonatales.",
+  },
+  // CIRUGÍA
+  {
+    id: 75,
+    question:
+      "¿Cuál es la complicación más grave de la enterocolitis necrotizante?",
+    options: [
+      "Deshidratación",
+      "Perforación intestinal",
+      "Intolerancia alimentaria",
+      "Anemia",
+    ],
+    correct: 1,
+    explanation:
+      "La perforación intestinal es la complicación más grave de la enterocolitis necrotizante y requiere cirugía de urgencia. Se manifiesta con neumoperitoneo en radiografía y deterioro clínico súbito.",
+  },
+  // RESPIRATORIO
+  {
+    id: 76,
+    question:
+      "¿Cuál es la indicación principal para administrar corticoides prenatales?",
+    options: [
+      "Prevención de infección neonatal",
+      "Maduración pulmonar fetal entre 24-34 semanas",
+      "Prevención de hemorragia intraventricular",
+      "Tratamiento de restricción del crecimiento",
+    ],
+    correct: 1,
+    explanation:
+      "Los corticoides prenatales (betametasona o dexametasona) entre las 24-34 semanas aceleran la maduración pulmonar fetal, aumentan la producción de surfactante y reducen significativamente el síndrome de dificultad respiratoria y la mortalidad neonatal.",
+  },
+  // ENDOCRINOLOGÍA
+  {
+    id: 77,
+    question:
+      "¿Cuál es el hallazgo bioquímico característico de la hiperplasia suprarrenal congénita por déficit de 21-hidroxilasa?",
+    options: [
+      "Hipoglucemia e hiperpotasemia",
+      "Hiponatremia e hiperpotasemia",
+      "Hipernatremia e hipopotasemia",
+      "Hipercalcemia",
+    ],
+    correct: 1,
+    explanation:
+      "El déficit de 21-hidroxilasa causa pérdida de sal con hiponatremia, hiperpotasemia y deshidratación (crisis suprarrenal), además de virilización en niñas por exceso de andrógenos. Requiere tratamiento urgente con hidrocortisona y fludrocortisona.",
+  },
+  // ATENCIÓN PRIMARIA
+  {
+    id: 78,
+    question:
+      "¿Cuál es la duración mínima recomendada de lactancia materna exclusiva según la OMS?",
+    options: ["3 meses", "4 meses", "6 meses", "12 meses"],
+    correct: 2,
+    explanation:
+      "La OMS recomienda lactancia materna exclusiva durante los primeros 6 meses de vida del lactante, continuando con alimentación complementaria hasta los 2 años o más. La lactancia materna proporciona nutrición óptima y protección inmunológica.",
+  },
+  // CARDIOLOGÍA
+  {
+    id: 79,
+    question:
+      "¿Cuál es la manifestación clínica característica de la comunicación interventricular (CIV) grande?",
+    options: [
+      "Cianosis desde el nacimiento",
+      "Insuficiencia cardíaca y dificultad para alimentarse",
+      "Asintomático toda la vida",
+      "Crisis de hipoxia",
+    ],
+    correct: 1,
+    explanation:
+      "Las CIV grandes causan sobrecarga de volumen e insuficiencia cardíaca, manifestándose con taquipnea, sudoración durante la alimentación, dificultad para ganar peso (falla de medro) y hepatomegalia. Los síntomas aparecen cuando baja la resistencia vascular pulmonar.",
+  },
+  // GASTROENTEROLOGÍA
+  {
+    id: 80,
+    question:
+      "¿Cuál es el volumen gástrico residual que indica intolerancia alimentaria en un prematuro?",
+    options: [
+      "Mayor al 10% del volumen administrado",
+      "Mayor al 25% del volumen administrado",
+      "Mayor al 50% del volumen administrado",
+      "Cualquier residuo gástrico",
+    ],
+    correct: 2,
+    explanation:
+      "Un residuo gástrico mayor al 50% del volumen de la toma anterior o mayor a 2-3 mL/kg sugiere intolerancia alimentaria en prematuros. Requiere pausar o reducir la alimentación enteral y evaluar otras causas como enterocolitis necrotizante.",
+  },
+  // MÁS PREGUNTAS DE OPCIÓN MÚLTIPLE - CUBRIENDO TODO EL PDF
+  // CIRUGÍA - HERNIAS
+  {
+    id: 81,
+    question:
+      "¿Cuál es la complicación más grave de la hernia inguinal en lactantes?",
+    options: [
+      "Dolor leve",
+      "Incarceración con riesgo de estrangulación intestinal",
+      "Infección local",
+      "Hematoma inguinal",
+    ],
+    correct: 1,
+    explanation:
+      "La incarceración (hernia irreducible) puede progresar a estrangulación con compromiso vascular del asa intestinal, causando isquemia, necrosis y perforación. Es más común en menores de 6 meses y requiere cirugía urgente.",
+  },
+  // ATENCIÓN PRIMARIA - CRECIMIENTO
+  {
+    id: 82,
+    question:
+      "¿Cuál es el crecimiento esperado en talla durante el primer año de vida?",
+    options: ["10-15 cm", "20-25 cm", "25-30 cm", "35-40 cm"],
+    correct: 2,
+    explanation:
+      "Durante el primer año, el lactante crece aproximadamente 25-30 cm (50% de su talla al nacer). El crecimiento es más rápido en los primeros 6 meses (15 cm) que en los segundos 6 meses (10 cm).",
+  },
+  // RESPIRATORIO - APNEA
+  {
+    id: 83,
+    question: "¿Cuál es la definición de apnea en un recién nacido prematuro?",
+    options: [
+      "Pausa respiratoria > 10 segundos",
+      "Pausa respiratoria > 20 segundos o < 20 seg con bradicardia/cianosis",
+      "Cualquier pausa respiratoria",
+      "Pausa respiratoria > 60 segundos",
+    ],
+    correct: 1,
+    explanation:
+      "La apnea del prematuro se define como cese de la respiración > 20 segundos, o < 20 segundos si se acompaña de bradicardia (<100 lpm), cianosis o desaturación (<85%). Es común en prematuros < 34 semanas por inmadurez del centro respiratorio.",
+  },
+  // GASTROENTEROLOGÍA - REFLUJO
+  {
+    id: 84,
+    question:
+      "¿Cuál es la diferencia entre regurgitación y reflujo gastroesofágico patológico?",
+    options: [
+      "No hay diferencia",
+      "Regurgitación es fisiológica sin complicaciones; RGE patológico causa síntomas (falla de medro, esofagitis, apneas)",
+      "Regurgitación solo ocurre en prematuros",
+      "RGE siempre requiere cirugía",
+    ],
+    correct: 1,
+    explanation:
+      "La regurgitación (RGE fisiológico) es el retorno pasivo de contenido gástrico sin esfuerzo, común en lactantes (pico 4 meses), autolimitado. El RGE patológico (ERGE) causa síntomas: falla de medro, esofagitis, vómitos persistentes, apneas, sibilancias. Requiere tratamiento.",
+  },
+  // HEMATOLOGÍA - GRUPO SANGUÍNEO
+  {
+    id: 85,
+    question:
+      "¿Cuál es la incompatibilidad de grupo sanguíneo más común que causa enfermedad hemolítica?",
+    options: [
+      "Incompatibilidad Rh",
+      "Incompatibilidad ABO (madre O, hijo A o B)",
+      "Incompatibilidad AB",
+      "Todas son igual de comunes",
+    ],
+    correct: 1,
+    explanation:
+      "La incompatibilidad ABO es más frecuente que Rh (1:150 vs 1:1000 embarazos). Ocurre cuando madre O tiene anticuerpos anti-A y anti-B que atacan al feto A o B. Generalmente es más leve que incompatibilidad Rh y puede ocurrir en primer embarazo.",
+  },
+  // CARDIOLOGÍA - PERSISTENCIA CONDUCTO
+  {
+    id: 86,
+    question:
+      "¿Cuál es el tratamiento farmacológico para cerrar el conducto arterioso persistente?",
+    options: [
+      "Prostaglandina E1",
+      "Indometacina o Ibuprofeno",
+      "Digoxina",
+      "Furosemida",
+    ],
+    correct: 1,
+    explanation:
+      "La indometacina (primera opción) o ibuprofeno son inhibidores de prostaglandinas que favorecen el cierre del conducto arterioso persistente. Dosis: indometacina 0.1-0.2 mg/kg IV cada 12-24h por 3 dosis. Si falla tratamiento médico, se requiere ligadura quirúrgica.",
+  },
+  // ENDOCRINOLOGÍA - DIABETES NEONATAL
+  {
+    id: 87,
+    question:
+      "¿Cuál es la principal diferencia entre diabetes neonatal transitoria y permanente?",
+    options: [
+      "No hay diferencia",
+      "Transitoria se resuelve antes de 18 meses; permanente requiere insulina de por vida",
+      "Transitoria solo afecta prematuros",
+      "Permanente siempre es autoinmune",
+    ],
+    correct: 1,
+    explanation:
+      "Diabetes neonatal transitoria (más común) aparece en primeras 6 semanas, se resuelve antes de 18 meses, puede recaer en adolescencia. Diabetes neonatal permanente requiere insulina de por vida, causada por mutaciones genéticas (KCNJ11, ABCC8, INS).",
+  },
+  // NEUROLOGÍA - DESARROLLO
+  {
+    id: 88,
+    question:
+      "¿A qué edad un lactante normal sostiene la cabeza estando en prono?",
+    options: ["Al nacer", "1-2 meses", "3-4 meses", "6 meses"],
+    correct: 2,
+    explanation:
+      "El control cefálico en prono se logra a los 3-4 meses. Hitos motores: 2 meses (sigue objetos 180°), 3-4 meses (control cefálico), 6 meses (sedestación con apoyo), 9 meses (sedestación sin apoyo, gateo), 12 meses (bipedestación, marcha con apoyo).",
+  },
+  // RENAL - INFECCIÓN URINARIA
+  {
+    id: 89,
+    question: "¿Cuál es la bacteria más común en infección urinaria neonatal?",
+    options: [
+      "Staphylococcus aureus",
+      "Escherichia coli",
+      "Klebsiella",
+      "Pseudomonas",
+    ],
+    correct: 1,
+    explanation:
+      "E. coli causa 80-90% de ITU en neonatos. Otros: Klebsiella, Proteus, Enterococcus. En neonatos, la ITU suele ser parte de sepsis con bacteriemia. Manifestaciones inespecíficas: fiebre, irritabilidad, vómitos, ictericia. Siempre requiere cultivo de orina por punción suprapúbica o cateterismo.",
+  },
+  // CIRUGÍA - INVAGINACIÓN
+  {
+    id: 90,
+    question: "¿Cuál es la tríada clásica de la invaginación intestinal?",
+    options: [
+      "Fiebre, vómito, diarrea",
+      "Dolor cólico intermitente, vómitos, heces en jalea de grosella",
+      "Ictericia, hepatomegalia, ascitis",
+      "Tos, disnea, cianosis",
+    ],
+    correct: 1,
+    explanation:
+      "La tríada clásica de invaginación intestinal (ileocólica) es: 1) Dolor abdominal cólico intenso e intermitente (episodios cada 15-20 min con llanto inconsolable), 2) Vómitos, 3) Heces en jalea de grosella (sangre y moco). Puede palparse masa en forma de salchicha. Edad típica: 3 meses-3 años.",
+  },
+  // ATENCIÓN PRIMARIA - VACUNAS
+  {
+    id: 91,
+    question: "¿Cuál es la edad de administración de la vacuna rotavirus?",
+    options: [
+      "Al nacer",
+      "Primera dosis a los 2 meses, completar serie antes de 8 meses",
+      "12 meses",
+      "4 años",
+    ],
+    correct: 1,
+    explanation:
+      "Vacuna rotavirus (oral): Primera dosis a los 2 meses, segunda a los 4 meses (algunas formulaciones requieren tercera dosis a 6 meses). IMPORTANTE: debe completarse ANTES de las 32 semanas (8 meses) por riesgo aumentado de invaginación intestinal después de esta edad.",
+  },
+  // RESPIRATORIO - DISPLASIA BRONCOPULMONAR
+  {
+    id: 92,
+    question: "¿Cuál es la definición de displasia broncopulmonar?",
+    options: [
+      "Cualquier problema respiratorio en prematuros",
+      "Dependencia de oxígeno suplementario a las 36 semanas de edad posmenstrual o a los 28 días de vida",
+      "Neumonía recurrente",
+      "Asma neonatal",
+    ],
+    correct: 1,
+    explanation:
+      "Displasia broncopulmonar (DBP) se define como: necesidad de oxígeno suplementario a las 36 semanas de edad posmenstrual (prematuros <32 sem) o a los 28 días de vida (prematuros >32 sem). Es la enfermedad pulmonar crónica más común en prematuros, causada por ventilación mecánica, oxígeno e inmadurez pulmonar.",
+  },
+  // GASTROENTEROLOGÍA - ALERGIA PROTEÍNA LECHE
+  {
+    id: 93,
+    question:
+      "¿Cuál es la manifestación más común de la alergia a la proteína de leche de vaca?",
+    options: [
+      "Anafilaxia severa",
+      "Síntomas gastrointestinales (vómitos, diarrea, sangre en heces)",
+      "Neumonía",
+      "Convulsiones",
+    ],
+    correct: 1,
+    explanation:
+      "APLV afecta 2-7% de lactantes. Manifestaciones: Gastrointestinales (más común): vómitos, diarrea, sangre en heces, cólicos, proctocolitis. Cutáneas: eccema, urticaria. Respiratorias: sibilancias (raro). Diagnóstico: mejoría con dieta de eliminación (fórmula extensamente hidrolizada), recaída con reintroducción.",
+  },
+  // HEMATOLOGÍA - ENFERMEDAD HEMORRÁGICA
+  {
+    id: 94,
+    question:
+      "¿Cuáles son los factores de coagulación dependientes de vitamina K?",
+    options: [
+      "Factores I, V, VIII",
+      "Factores II, VII, IX, X",
+      "Factores XI, XII, XIII",
+      "Solo el factor VIII",
+    ],
+    correct: 1,
+    explanation:
+      "Los factores de coagulación dependientes de vitamina K son: Factor II (protrombina), VII, IX y X, además de proteínas C y S (anticoagulantes). La deficiencia de vitamina K prolonga TP y TTPa pero mantiene normal el tiempo de sangrado (plaquetas normales).",
+  },
+  // CARDIOLOGÍA - SHOCK CARDIOGÉNICO
+  {
+    id: 95,
+    question:
+      "¿Cuál es el signo más temprano de insuficiencia cardíaca en un lactante?",
+    options: [
+      "Cianosis severa",
+      "Taquipnea y sudoración durante la alimentación",
+      "Convulsiones",
+      "Ictericia",
+    ],
+    correct: 1,
+    explanation:
+      "Los signos tempranos de IC en lactantes son: taquipnea (>60 rpm), sudoración durante alimentación (signo de esfuerzo), dificultad para alimentarse, falla de medro. Signos posteriores: hepatomegalia, taquicardia, galope, edema, crepitantes pulmonares. La falla de medro es frecuente (gasto calórico aumentado).",
+  },
+  // ENDOCRINOLOGÍA - TALLA BAJA
+  {
+    id: 96,
+    question: "¿Cuál es la causa más común de talla baja patológica en niños?",
+    options: [
+      "Déficit de hormona de crecimiento",
+      "Hipotiroidismo",
+      "Enfermedad celíaca",
+      "Desnutrición crónica",
+    ],
+    correct: 1,
+    explanation:
+      "El hipotiroidismo es la causa endocrina tratable más común de talla baja patológica. Causa retraso del crecimiento con maduración ósea retrasada, proporciones corporales infantiles. Otras causas: desnutrición, enfermedad celíaca (frecuente), síndrome de Turner, déficit GH (raro), síndromes genéticos.",
+  },
+  // NEUROLOGÍA - HIPOTONÍA
+  {
+    id: 97,
+    question: "¿Cuál es la causa más común de hipotonía neonatal central?",
+    options: [
+      "Atrofia muscular espinal",
+      "Encefalopatía hipóxico-isquémica",
+      "Síndrome de Down",
+      "Distrofia muscular",
+    ],
+    correct: 1,
+    explanation:
+      "La encefalopatía hipóxico-isquémica es la causa más común de hipotonía CENTRAL (origen cerebral) en neonatos. Hipotonía central: hipotonía con reflejos normales o aumentados, retraso global. Hipotonía periférica: hipotonía con reflejos disminuidos/ausentes, debilidad muscular (ej: atrofia muscular espinal tipo 1).",
+  },
+  // RENAL - SÍNDROME NEFRÓTICO
+  {
+    id: 98,
+    question: "¿Cuál es el tipo más común de síndrome nefrótico en niños?",
+    options: [
+      "Síndrome nefrótico congénito",
+      "Síndrome nefrótico por cambios mínimos",
+      "Glomerulonefritis membranoproliferativa",
+      "Nefropatía por IgA",
+    ],
+    correct: 1,
+    explanation:
+      "El síndrome nefrótico por cambios mínimos (lesión mínima) representa el 80-90% de los casos en niños de 2-6 años. Se caracteriza por: proteinuria masiva, hipoalbuminemia, edema, hiperlipidemia. Excelente respuesta a corticoides (90% remite). Biopsia: glomérulos normales en microscopía óptica.",
+  },
+  // CIRUGÍA - CRIPTORQUIDIA
+  {
+    id: 99,
+    question:
+      "¿Cuál es la edad óptima para corrección quirúrgica de criptorquidia?",
+    options: ["Al nacer", "6-18 meses", "5 años", "En la adolescencia"],
+    correct: 1,
+    explanation:
+      "La orquidopexia debe realizarse entre 6-18 meses de edad (idealmente antes del año) para prevenir complicaciones: infertilidad (daño por temperatura elevada), mayor riesgo de cáncer testicular (40x), torsión testicular, hernia inguinal. Testículos no descendidos no descenderán espontáneamente después de 6 meses.",
+  },
+  // ATENCIÓN PRIMARIA - SUEÑO
+  {
+    id: 100,
+    question: "¿Cuántas horas de sueño necesita un lactante de 6 meses?",
+    options: [
+      "8-10 horas totales",
+      "12-15 horas totales (10-12h nocturnas + 2-3 siestas)",
+      "18-20 horas",
+      "6-8 horas",
+    ],
+    correct: 1,
+    explanation:
+      "Necesidades de sueño por edad: RN: 16-20h, 3 meses: 14-16h, 6 meses: 12-15h (10-12h nocturnas + 2-3 siestas), 12 meses: 12-14h (11-12h nocturnas + 1-2 siestas), 2 años: 11-14h (10-12h nocturnas + 1 siesta). Patrones de sueño maduran progresivamente.",
+  },
 ];
 
 const trueFalseQuestions = [
@@ -1123,6 +1674,186 @@ const trueFalseQuestions = [
     explanation:
       "FALSO. El surfactante se administra según indicaciones: 1) SDR establecido que requiere intubación, 2) Profiláctico en <26 semanas o <1000g. No todos los prematuros lo necesitan. El uso indiscriminado puede causar complicaciones.",
   },
+  // NUEVAS PREGUNTAS V/F AGREGADAS - MEZCLADAS POR ESPECIALIDADES
+  // CARDIOLOGÍA
+  {
+    id: 41,
+    statement:
+      "La coartación de aorta se manifiesta con pulsos femorales disminuidos o ausentes.",
+    correct: true,
+    explanation:
+      "VERDADERO. El hallazgo clínico clave es la disminución o ausencia de pulsos femorales con pulsos braquiales normales o aumentados, además de diferencia de presión arterial entre extremidades superiores e inferiores.",
+  },
+  // ENDOCRINOLOGÍA
+  {
+    id: 42,
+    statement:
+      "Los hijos de madre diabética tienen mayor riesgo de hipoglucemia neonatal.",
+    correct: true,
+    explanation:
+      "VERDADERO. El hiperinsulinismo fetal secundario a hiperglucemia materna causa hipoglucemia de rebote al nacer cuando se corta el aporte materno de glucosa. Requieren monitorización estrecha de glucemia.",
+  },
+  // GASTROENTEROLOGÍA
+  {
+    id: 43,
+    statement:
+      "La atresia de vías biliares debe ser tratada antes de los 60 días de vida para mejor pronóstico.",
+    correct: true,
+    explanation:
+      "VERDADERO. El procedimiento de Kasai tiene mejor tasa de éxito si se realiza antes de los 60 días de vida, idealmente antes de los 45 días. Después de este tiempo, la fibrosis hepática progresa rápidamente.",
+  },
+  // NEUROLOGÍA
+  {
+    id: 44,
+    statement:
+      "La hipotermia terapéutica debe iniciarse dentro de las primeras 6 horas en encefalopatía hipóxico-isquémica.",
+    correct: true,
+    explanation:
+      "VERDADERO. La ventana terapéutica para hipotermia es crítica: debe iniciarse antes de las 6 horas de vida para obtener beneficio neuroprotector y mejorar el pronóstico neurológico a largo plazo.",
+  },
+  // HEMATOLOGÍA
+  {
+    id: 45,
+    statement:
+      "Los recién nacidos tienen niveles de hemoglobina más altos que los adultos.",
+    correct: true,
+    explanation:
+      "VERDADERO. Los RN tienen Hb de 16-20 g/dL (vs 12-16 en adultos) debido a la hipoxia relativa intrauterina que estimula la eritropoyesis fetal y compensación por la menor capacidad de transporte de oxígeno de la HbF.",
+  },
+  // RENAL
+  {
+    id: 46,
+    statement:
+      "Es normal que un recién nacido no orine en las primeras 48 horas de vida.",
+    correct: false,
+    explanation:
+      "FALSO. El 95% de los recién nacidos orinan en las primeras 24 horas de vida. La ausencia de micción después de 24 horas requiere evaluación para descartar anomalías renales u obstrucción urinaria.",
+  },
+  // CIRUGÍA
+  {
+    id: 47,
+    statement:
+      "El signo de la doble burbuja en radiografía es patognomónico de atresia duodenal.",
+    correct: true,
+    explanation:
+      "VERDADERO. La doble burbuja representa la dilatación del estómago y duodeno proximal con ausencia de gas distal, característico de atresia duodenal. Frecuentemente asociado a síndrome de Down.",
+  },
+  // RESPIRATORIO
+  {
+    id: 48,
+    statement:
+      "La taquipnea transitoria del recién nacido requiere administración de surfactante.",
+    correct: false,
+    explanation:
+      "FALSO. La taquipnea transitoria es autolimitada, causada por retraso en la reabsorción del líquido pulmonar fetal, y solo requiere oxígeno suplementario si es necesario. El surfactante se usa en enfermedad de membrana hialina.",
+  },
+  // ATENCIÓN PRIMARIA
+  {
+    id: 49,
+    statement:
+      "Se debe iniciar alimentación complementaria a los 4 meses para prevenir alergias.",
+    correct: false,
+    explanation:
+      "FALSO. La OMS recomienda lactancia materna exclusiva hasta los 6 meses. Iniciar antes no previene alergias y puede aumentar el riesgo de infecciones gastrointestinales y obesidad.",
+  },
+  // CARDIOLOGÍA
+  {
+    id: 50,
+    statement:
+      "La prostaglandina E1 se utiliza para cerrar el conducto arterioso persistente.",
+    correct: false,
+    explanation:
+      "FALSO. La PGE1 mantiene ABIERTO el conducto en cardiopatías ductus-dependientes. Para cerrar el conducto arterioso persistente se usa indometacina o ibuprofeno.",
+  },
+  // MÁS PREGUNTAS V/F - CUBRIENDO TODO EL PDF
+  // RESPIRATORIO
+  {
+    id: 51,
+    statement:
+      "La frecuencia respiratoria normal en un recién nacido es de 30-40 respiraciones por minuto.",
+    correct: false,
+    explanation:
+      "FALSO. La frecuencia respiratoria normal en RN es de 40-60 rpm. Más de 60 rpm se considera taquipnea y menos de 30 rpm bradipnea.",
+  },
+  // GASTROENTEROLOGÍA
+  {
+    id: 52,
+    statement:
+      "El meconio normalmente debe ser evacuado en las primeras 48 horas de vida.",
+    correct: true,
+    explanation:
+      "VERDADERO. El 95% de los RN a término evacuan meconio en las primeras 24 horas y casi todos en las primeras 48 horas. El retraso sugiere obstrucción intestinal, íleo meconial o enfermedad de Hirschsprung.",
+  },
+  // NEUROLOGÍA
+  {
+    id: 53,
+    statement:
+      "La fontanela anterior normalmente se cierra entre los 9-18 meses de edad.",
+    correct: true,
+    explanation:
+      "VERDADERO. La fontanela anterior (bregmática) se cierra entre los 9-18 meses, mientras que la fontanela posterior se cierra a los 2-3 meses. El cierre prematuro puede indicar craneosinostosis.",
+  },
+  // HEMATOLOGÍA
+  {
+    id: 54,
+    statement:
+      "La policitemia neonatal se define como hematocrito venoso mayor al 65%.",
+    correct: true,
+    explanation:
+      "VERDADERO. Policitemia se define como Hto venoso > 65% o Hb > 22 g/dL. Causa hiperviscosidad sanguínea que puede comprometer perfusión cerebral, renal e intestinal.",
+  },
+  // ENDOCRINOLOGÍA
+  {
+    id: 55,
+    statement: "La hiperplasia suprarrenal congénita afecta solo a niñas.",
+    correct: false,
+    explanation:
+      "FALSO. Afecta a ambos sexos por igual, pero es más evidente en niñas por la virilización genital. Los niños pueden presentarse con crisis de pérdida de sal sin signos externos evidentes.",
+  },
+  // RENAL
+  {
+    id: 56,
+    statement: "El riñón en herradura es la fusión renal más común.",
+    correct: true,
+    explanation:
+      "VERDADERO. El riñón en herradura (fusión de los polos inferiores) es la anomalía de fusión renal más frecuente, ocurriendo en 1:400 nacimientos. Generalmente es asintomático pero puede asociarse a otras anomalías.",
+  },
+  // CIRUGÍA
+  {
+    id: 57,
+    statement:
+      "La gastrosquisis tiene peor pronóstico que el onfalocele debido a malformaciones asociadas.",
+    correct: false,
+    explanation:
+      "FALSO. El onfalocele tiene peor pronóstico porque frecuentemente se asocia a otras malformaciones y síndromes genéticos (trisomías). La gastrosquisis es generalmente un defecto aislado con mejor pronóstico.",
+  },
+  // ATENCIÓN PRIMARIA
+  {
+    id: 58,
+    statement:
+      "Un lactante debe duplicar su peso al nacer alrededor de los 4-5 meses de edad.",
+    correct: true,
+    explanation:
+      "VERDADERO. El lactante duplica su peso al nacer alrededor de los 4-5 meses, lo triplica al año de vida, y lo cuadruplica a los 2 años.",
+  },
+  // RESPIRATORIO
+  {
+    id: 59,
+    statement:
+      "El síndrome de aspiración de meconio ocurre principalmente en prematuros.",
+    correct: false,
+    explanation:
+      "FALSO. El SAM afecta principalmente a RN postérmino (>42 semanas) o a término con sufrimiento fetal. Los prematuros rara vez tienen tono esfinteriano suficiente para evacuar meconio intraútero.",
+  },
+  // CARDIOLOGÍA
+  {
+    id: 60,
+    statement:
+      "El canal auriculoventricular es la cardiopatía más común en síndrome de Down.",
+    correct: true,
+    explanation:
+      "VERDADERO. El 40-50% de niños con síndrome de Down tienen cardiopatía, siendo el canal AV (defecto de cojines endocárdicos) la más frecuente (45% de las cardiopatías en Down).",
+  },
 ];
 
 const justificationQuestions = [
@@ -1321,6 +2052,184 @@ const justificationQuestions = [
     ],
     modelAnswer:
       "El Tamizaje Neonatal es un programa de salud pública que identifica PRESINTOMÁTICAMENTE enfermedades metabólicas, endocrinas y genéticas TRATABLES, permitiendo intervención temprana ANTES de daño irreversible. PRINCIPIOS: 1) Detecta enfermedades SERIAS (causan muerte/discapacidad severa), 2) Hay TRATAMIENTO efectivo disponible, 3) Son ASINTOMÁTICAS al nacer pero se manifestarán días-semanas después, 4) La intervención PRECOZ previene complicaciones, 5) Son relativamente FRECUENTES para justificar screening universal. TIMING CRÍTICO: La muestra (sangre del talón en papel filtro) debe tomarse: DESPUÉS de 48 HORAS de vida porque: Muchos metabolitos anormales solo se acumulan tras inicio de alimentación enteral. Ej: en PKU, la fenilalanina se acumula solo después de ingerir proteínas; en galactosemia, tras ingerir lactosa. TSH puede estar falsamente elevada en primeras 24-48h (surge fisiológico posnatal). La alimentación establece el metabolismo basal necesario para detectar anomalías. ANTES del ALTA hospitalaria porque: ~1% de familias no regresa para la prueba si se pospone, perdiendo el diagnóstico. La mayoría de RN salen <48-72h, por lo que la ventana es estrecha. Si alta <24-48h (común hoy), se debe citar para repetir muestra a 1-2 semanas. CONDICIONES DETECTADAS (varía por país, >50 posibles): 1) HIPOTIROIDISMO CONGÉNITO (1:2000-4000): ↑TSH, ↓T4. Sin tratamiento: retraso mental severo irreversible, talla baja. Con levotiroxina desde primeras semanas: desarrollo normal. 2) FENILCETONURIA/PKU (1:10,000-15,000): Déficit enzima fenilalanina hidroxilasa → acumulación fenilalanina → daño cerebral (↓mielinización, ↓neurotransmisores). Sin dieta: CI <50, convulsiones, autismo. Con dieta baja fenilalanina desde primera semana-mes: desarrollo intelectual normal. 3) GALACTOSEMIA (1:50,000): Déficit galactosa-1-fosfato uridiltransferasa → acumulación galactosa-1-P tóxica. Sin dieta: falla hepática, cataratas, sepsis E.coli, discapacidad intelectual. Con dieta sin lactosa: previene complicaciones agudas (mejora hepática/sepsis) pero pueden persistir problemas de aprendizaje/ovario. 4) HIPERPLASIA SUPRARRENAL CONGÉNITA (1:15,000): Déficit 21-hidroxilasa → crisis suprarrenal con pérdida sal (shock, muerte súbita a 1-3 sem vida). Tamizaje detecta ↑17-OH-progesterona. Con hidrocortisona+fludrocortisona: evita crisis letales. 5) FIBROSIS QUÍSTICA (1:3000 caucásicos): ↑tripsinógeno inmunorreactivo. Diagnóstico temprano permite inicio precoz de terapia respiratoria, enzimas pancreáticas, nutrición → mejor pronóstico pulmonar y crecimiento. 6) OTROS: Defectos oxidación ácidos grasos (MCAD), aminoacidopatías (jarabe arce), acidemias orgánicas, anemia falciforme (en poblaciones riesgo). PROCESO: Si screening positivo → llamada urgente a familia → CONFIRMACIÓN con pruebas específicas (no todos los positivos son verdaderos) → si confirma: inicio inmediato tratamiento y consejería genética. Los resultados falsos positivos causan ansiedad parental pero son necesarios (↑sensibilidad para no perder casos). IMPACTO: Antes del tamizaje universal, hipotiroidismo congénito era causa principal de retraso mental prevenible. Hoy, con screening, estos niños tienen CI normal. Es uno de los avances en salud pública más costo-efectivos: por cada dólar invertido, ahorra >10 dólares en costos de discapacidad/institucionalización.",
+  },
+  // NUEVAS PREGUNTAS DE JUSTIFICACIÓN AGREGADAS
+  // CARDIOLOGÍA
+  {
+    id: 15,
+    question:
+      "Justifica el uso de prostaglandina E1 en cardiopatías congénitas ductus-dependientes y explica en qué situaciones está indicada.",
+    keyPoints: [
+      "Mantenimiento del conducto arterioso",
+      "Cardiopatías dependientes de flujo pulmonar o sistémico",
+      "Mecanismo de acción vasodilatador",
+      "Tratamiento puente hasta cirugía",
+    ],
+    modelAnswer:
+      "Las prostaglandinas E1 (PGE1) mantienen la permeabilidad del conducto arterioso en cardiopatías ductus-dependientes donde el flujo pulmonar o sistémico depende del conducto. INDICACIONES: Para flujo pulmonar (estenosis pulmonar crítica, atresia pulmonar, Tetralogía de Fallot severa), donde el conducto proporciona la única vía de flujo sanguíneo a los pulmones. Para flujo sistémico (coartación aórtica crítica, interrupción del arco aórtico, síndrome de hipoplasia de corazón izquierdo), donde el conducto perfunde el cuerpo. MECANISMO: la PGE1 relaja el músculo liso ductal al aumentar AMPc, previniendo su cierre natural. DOSIS: 0.01-0.1 mcg/kg/min IV continua. EFECTOS ADVERSOS: apnea (requiere intubación), hipotensión, fiebre. Es un tratamiento puente vital hasta la corrección quirúrgica definitiva.",
+  },
+  // GASTROENTEROLOGÍA
+  {
+    id: 16,
+    question:
+      "Explica por qué los vómitos biliosos en un recién nacido constituyen una emergencia quirúrgica y qué complicaciones pueden ocurrir si no se tratan a tiempo.",
+    keyPoints: [
+      "Indican obstrucción intestinal",
+      "Riesgo de vólvulo intestinal",
+      "Compromiso vascular mesentérico",
+      "Necrosis intestinal si hay retraso",
+    ],
+    modelAnswer:
+      "Los vómitos biliosos en un recién nacido indican obstrucción intestinal distal al ámpula de Vater (segunda porción duodenal) y deben considerarse una emergencia quirúrgica hasta demostrar lo contrario. Las causas incluyen atresia intestinal, vólvulo intestinal medio, malrotación intestinal y bandas de Ladd. El vólvulo es particularmente peligroso porque la torsión del mesenterio compromete el riego vascular intestinal, pudiendo causar isquemia, necrosis y perforación intestinal en pocas horas. La demora en el diagnóstico y tratamiento puede resultar en síndrome de intestino corto (requiere nutrición parenteral prolongada), sepsis abdominal, o muerte. Por ello, ante vómitos biliosos se debe realizar evaluación clínica urgente, estudios de imagen (radiografía simple, serie gastroduodenal con contraste) y preparación para cirugía exploradora inmediata.",
+  },
+  // NEUROLOGÍA
+  {
+    id: 17,
+    question:
+      "Describe el mecanismo de acción de la hipotermia terapéutica en la encefalopatía hipóxico-isquémica y explica por qué debe iniciarse en las primeras 6 horas de vida.",
+    keyPoints: [
+      "Reducción del metabolismo cerebral",
+      "Disminución de excitotoxicidad",
+      "Prevención de apoptosis neuronal",
+      "Ventana terapéutica crítica de 6 horas",
+    ],
+    modelAnswer:
+      "La hipotermia terapéutica (enfriamiento a 33.5-34.5°C durante 72 horas) es un tratamiento neuroprotector para encefalopatía hipóxico-isquémica moderada-severa. Su mecanismo de acción incluye: 1) Reducción del metabolismo cerebral y el consumo de oxígeno (disminuye 5% por cada grado de temperatura), 2) Disminución de la liberación de glutamato y excitotoxicidad, 3) Inhibición de la cascada de apoptosis neuronal, 4) Reducción de la inflamación y edema cerebral, y 5) Preservación de la autorregulación cerebrovascular. Debe iniciarse dentro de las primeras 6 horas de vida (ventana terapéutica crítica) porque el daño cerebral ocurre en dos fases: primaria (durante la hipoxia-isquemia) y secundaria (horas después, con reperfusión). La hipotermia interrumpe la fase secundaria. Estudios demuestran que reduce la mortalidad en 25% y mejora significativamente el pronóstico neurológico a largo plazo, disminuyendo parálisis cerebral y discapacidad severa.",
+  },
+  // RENAL
+  {
+    id: 18,
+    question:
+      "Explica por qué la hidronefrosis es la anomalía renal más frecuentemente detectada en ecografías prenatales y describe los criterios para decidir entre manejo conservador y quirúrgico.",
+    keyPoints: [
+      "Obstrucción unión ureteropélvica más común",
+      "Detección prenatal por ecografía",
+      "Clasificación por grados de severidad",
+      "Criterios quirúrgicos vs observación",
+    ],
+    modelAnswer:
+      "La hidronefrosis es la anomalía renal más común en ecografías prenatales (1-5% de embarazos) debido a la alta frecuencia de obstrucción de la unión ureteropélvica (UPJ) y reflujo vesicoureteral. La obstrucción puede ser anatómica (estenosis, inserción anómala) o funcional (aperistalsis). Se clasifica por grados (I-IV) según la dilatación pélvica y afectación del parénquima. MANEJO CONSERVADOR: hidronefrosis leve-moderada (grado I-II) suele resolverse espontáneamente (50-70% de casos) y solo requiere seguimiento ecográfico postnatal (1 semana, 1 mes, 3-6 meses), gammagrafía renal MAG-3 para función diferencial, y profilaxis antibiótica para prevenir infecciones. MANEJO QUIRÚRGICO (pieloplastia): indicado en hidronefrosis severa (grado III-IV) con: función renal diferencial <40% o en deterioro, hidronefrosis progresiva en seguimiento, infecciones urinarias recurrentes a pesar de profilaxis, síntomas (dolor, hematuria). El objetivo es preservar la función renal antes de daño irreversible.",
+  },
+  // MÁS PREGUNTAS DE JUSTIFICACIÓN - COBERTURA TOTAL DEL PDF
+  // SEPSIS NEONATAL
+  {
+    id: 19,
+    question:
+      "Un recién nacido prematuro de 30 semanas desarrolla apneas, inestabilidad térmica, intolerancia alimentaria y leucopenia a las 72 horas de vida. Los cultivos crecen E. coli. Justifica por qué los prematuros tienen mayor riesgo de sepsis de inicio tardío y explica las diferencias entre sepsis temprana y tardía.",
+    keyPoints: [
+      "Inmadurez del sistema inmune en prematuros",
+      "Sepsis temprana vs tardía: tiempo y etiología",
+      "Factores de riesgo específicos",
+      "Microorganismos causales diferentes",
+      "Presentación clínica inespecífica",
+    ],
+    modelAnswer:
+      "Los prematuros tienen riesgo 3-10 veces mayor de sepsis por inmadurez inmunológica: deficiencia de IgG (cruza placenta en tercer trimestre), neutropenia relativa, disminución de función fagocítica, y barrera cutáneo-mucosa inmadura. SEPSIS TEMPRANA (<72h): transmisión vertical/perinatal, agentes: Estreptococo grupo B (40-50%), E. coli (15-20%, más común en prematuros), Listeria. Factores de riesgo: RPM >18h, fiebre materna, corioamnionitis, colonización materna. SEPSIS TARDÍA (>72h): transmisión horizontal/nosocomial (este caso), agentes: Estafilococos coagulasa-negativos (más común), E. coli, Klebsiella, Candida. Factores de riesgo: catéteres centrales, ventilación mecánica, nutrición parenteral, estancia hospitalaria prolongada. La presentación es inespecífica: apneas, inestabilidad térmica, intolerancia alimentaria, letargia. Requiere alto índice de sospecha, hemocultivos antes de antibióticos empíricos (ampicilina + gentamicina/cefotaxima para temprana; vancomicina + gentamicina para tardía), ajuste según cultivos.",
+  },
+  // RETINOPATÍA DEL PREMATURO
+  {
+    id: 20,
+    question:
+      "Explica la fisiopatología de la retinopatía del prematuro, los factores de riesgo principales y por qué el screening oftalmológico es crucial en prematuros extremos.",
+    keyPoints: [
+      "Vascularización retiniana incompleta en prematuros",
+      "Dos fases: hiperoxia y neovascularización",
+      "Factores de riesgo: prematuridad y oxígeno",
+      "Screening sistemático previene ceguera",
+      "Tratamiento oportuno (láser/anti-VEGF)",
+    ],
+    modelAnswer:
+      "La ROP ocurre por interrupción de la vascularización retiniana normal (completa a las 40 semanas). FASE 1 (hiperoxia): La exposición a oxígeno suprafisiológico causa vasoconstricción y cese de la vascularización retiniana, con pérdida de vasos existentes (zona avascular). FASE 2 (neovascularización): Al retirar O₂ suplementario, la retina avascular se vuelve hipóxica, liberando VEGF que induce proliferación vascular desordenada (neovascularización patológica) que puede causar hemorragia vítrea, tracción y desprendimiento de retina. FACTORES DE RIESGO: prematuridad <32 semanas o <1500g (principal), oxigenoterapia prolongada, sepsis, transfusiones, ventilación mecánica. SCREENING: Esencial en <32 semanas o <1500g, iniciar a las 4-6 semanas de vida o 31 semanas posmenstruales. Clasificación: zonas (I-III), estadios (1-5), enfermedad plus (dilatación vascular). TRATAMIENTO: Estadios 1-2 se resuelven espontáneamente; estadios 3+ con enfermedad plus requieren tratamiento urgente con láser (ablación zona avascular) o anti-VEGF (bevacizumab). El screening sistemático ha reducido drásticamente la ceguera por ROP.",
+  },
+  // HIPERTENSIÓN PULMONAR PERSISTENTE
+  {
+    id: 21,
+    question:
+      "Un neonato a término con antecedente de líquido amniótico meconial presenta cianosis central severa, taquipnea y saturación de 75% con O₂ al 100%. La ecocardiografía muestra cortocircuito derecha-izquierda a nivel de conducto arterioso. Justifica la fisiopatología de la hipertensión pulmonar persistente y su manejo.",
+    keyPoints: [
+      "Falla de transición circulatoria fetal-neonatal",
+      "Vasoconstricción pulmonar persistente",
+      "Cortocircuitos de derecha a izquierda",
+      "Causas: hipoxia, aspiración meconial, sepsis",
+      "Tratamiento: ventilación óptima, óxido nítrico, ECMO",
+    ],
+    modelAnswer:
+      "La HPPRN es la falla de la transición circulatoria normal al nacer. FISIOPATOLOGÍA: Normalmente, al nacer, la expansión pulmonar y el aumento de PO₂ causan vasodilatación pulmonar, disminuyendo la resistencia vascular pulmonar (RVP) y cerrando cortocircuitos fetales (foramen oval, conducto arterioso). En HPPRN, estímulos como hipoxia, acidosis, hipotermia, inflamación (síndrome aspiración meconial) mantienen vasoconstricción pulmonar elevada. La RVP persiste alta (>resistencia sistémica), manteniendo cortocircuitos D→I a través de foramen oval y conducto arterioso, causando hipoxemia severa refractaria. Causas: SAM (más común), neumonía/sepsis, SDR, hernia diafragmática, asfixia perinatal. DIAGNÓSTICO: gradiente de saturación preductal (mano derecha) vs postductal (pies) >5-10%, ecocardiografía confirma cortocircuitos y excluye cardiopatía. MANEJO: 1) Ventilación óptima (evitar hipoxia, hipercapnia, acidosis que aumentan RVP), 2) Óxido nítrico inhalado (vasodilatador selectivo pulmonar, 20 ppm), 3) Sedación/analgesia, 4) Inotrópicos si shock, 5) Alcalinización (pH 7.45-7.55 disminuye RVP), 6) ECMO si falla médica.",
+  },
+  // CONVULSIONES NEONATALES
+  {
+    id: 22,
+    question:
+      "Las convulsiones neonatales tienen características clínicas diferentes a las convulsiones en niños mayores. Describe las manifestaciones clínicas sutiles, las causas más comunes y por qué es importante el estudio etiológico completo.",
+    keyPoints: [
+      "Manifestaciones sutiles vs generalizadas",
+      "Causas: EHI, hemorragia, infección, metabólicas",
+      "Importancia del estudio etiológico",
+      "EEG para confirmar crisis eléctricas",
+      "Tratamiento: fenobarbital, causa subyacente",
+    ],
+    modelAnswer:
+      "Las convulsiones neonatales son frecuentemente SUTILES (50%): chupeteo, movimientos oculares anormales (desviación, nistagmo), pedaleo, apneas, cambios autonómicos. Convulsiones TÓNICAS (extensión de extremidades) y CLÓNICAS (sacudidas rítmicas focales o multifocales) son menos comunes. El cerebro inmaduro no sustenta convulsiones tónico-clónicas generalizadas como en niños mayores. CAUSAS MÁS COMUNES: 1) Encefalopatía hipóxico-isquémica (40-50%, inicio 12-24h), 2) Hemorragia intracraneal (hemorragia intraventricular, subdural), 3) Infección SNC (meningitis, encefalitis, sepsis), 4) Alteraciones metabólicas (hipoglucemia, hipocalcemia, hipomagnesemia, hiponatremia), 5) Errores innatos del metabolismo (deficiencia piridoxina), 6) Malformaciones cerebrales, 7) Síndrome de abstinencia. ESTUDIO COMPLETO ESENCIAL: historia obstétrica/perinatal, glucemia, calcio, magnesio, electrolitos, gasometría, hemocultivo, PL (descartar meningitis), EEG (confirma crisis eléctricas, muchas son subclínicas), neuroimagen (eco/RM). TRATAMIENTO: fenobarbital (20 mg/kg IV dosis carga), tratar causa subyacente (glucosa si hipoglucemia, antibióticos si infección, hipotermia si EHI). El pronóstico depende de la etiología: EHI y malformaciones tienen peor pronóstico; metabólicas corregibles tienen buen pronóstico.",
+  },
+  // LACTANCIA MATERNA
+  {
+    id: 23,
+    question:
+      "Justifica por qué la lactancia materna es especialmente importante en prematuros y describe las diferencias entre leche materna de término vs prematuros, y cuándo está indicada la fortificación.",
+    keyPoints: [
+      "Beneficios específicos para prematuros",
+      "Composición diferente en leche de madre de prematuro",
+      "Protección contra enterocolitis necrotizante",
+      "Fortificación para prematuros <1500g",
+      "Apoyo para extracción y lactancia",
+    ],
+    modelAnswer:
+      "La lactancia materna en prematuros es CRÍTICA por beneficios superiores: 1) PROTECCIÓN contra ECN (reduce riesgo 77%), 2) Menor incidencia de sepsis tardía, 3) Mejor tolerancia alimentaria y vaciamiento gástrico, 4) Mejor desarrollo neurocognitivo a largo plazo, 5) Factores de crecimiento y hormonas que promueven maduración intestinal. COMPOSICIÓN: La leche de madre de prematuro tiene MAYOR contenido de proteínas (1.8-2 g/dL vs 1.2-1.5 en término), mayor energía (70-75 kcal/dL), más lactoferrina (antimicrobiana), más IgA secretora, más oligosacáridos (prebióticos). Estas diferencias persisten 4-6 semanas. FORTIFICACIÓN: Indicada en prematuros <1500g o <32 semanas porque incluso la leche de madre de prematuro no cubre todos los requerimientos elevados (especialmente calcio, fósforo, proteínas). Los fortificadores añaden: proteínas (0.7-1 g), calcio, fósforo, vitaminas, minerales, alcanzando 24 kcal/oz. Se inicia cuando tolerancia enteral >100 mL/kg/día. APOYO: Extracción 8-12 veces/día, banco de leche si madre no puede, contacto piel-piel (método canguro) aumenta producción láctea. Contraindicaciones ABSOLUTAS: galactosemia, madre VIH+ (en países con acceso a fórmula segura), tuberculosis activa no tratada, drogas incompatibles.",
+  },
+  // ICTERICIA - FOTOTERAPIA
+  {
+    id: 24,
+    question:
+      "Explica los mecanismos por los cuales la fototerapia reduce la bilirrubina sérica y describe los factores que determinan su efectividad. ¿Por qué algunos neonatos requieren fototerapia intensiva o exanguinotransfusión?",
+    keyPoints: [
+      "Fotoisomerización de bilirrubina",
+      "Longitud de onda óptima (azul 460-490 nm)",
+      "Factores de efectividad: irradiancia y área expuesta",
+      "Indicaciones según nomogramas",
+      "Exanguinotransfusión en falla de fototerapia",
+    ],
+    modelAnswer:
+      "MECANISMOS DE FOTOTERAPIA: La luz azul (460-490 nm) penetra la piel y produce dos reacciones: 1) FOTOISOMERIZACIÓN (principal): convierte bilirrubina no conjugada (4Z,15Z) liposoluble en isómeros (4Z,15E y 4E,15Z) hidrosolubles que se excretan en bilis/orina SIN conjugación hepática, y 2) FOTO-OXIDACIÓN: convierte bilirrubina en productos pequeños hidrosolubles (menor importancia). FACTORES DE EFECTIVIDAD: 1) Irradiancia (intensidad luz): fototerapia intensiva >30 μW/cm²/nm vs estándar 8-10 μW/cm²/nm, 2) Área corporal expuesta: mayor área (desnudo con solo pañal) = mayor efectividad, 3) Distancia fuente-paciente (más cerca = mayor irradiancia), 4) Tipo de bilirrubina: directa no responde. INDICACIONES: Usar nomogramas de Bhutani según edad posnatal y factores de riesgo (prematuridad, hemólisis, acidosis). EXANGUINOTRANSFUSIÓN: Indicada cuando falla fototerapia intensiva, bilirrubina alcanza zona de exanguineo (>25 mg/dL en término sano), o signos de neurotoxicidad aguda (kernicterus). Remueve bilirrubina, anticuerpos (en hemólisis) y eritrocitos sensibilizados. Complicaciones: alteraciones electrolíticas, coagulopatía, enterocolitis. PREVENCIÓN: identificar factores de riesgo, seguimiento posnatal estrecho, iniciar fototerapia oportuna.",
+  },
+  // CUIDADO TÉRMICO
+  {
+    id: 25,
+    question:
+      "Un prematuro de 26 semanas, 800g nace con temperatura de 34.5°C a pesar de reanimación bajo calor radiante. Explica por qué los prematuros extremos pierden calor rápidamente y describe las estrategias de termorregulación en sala de partos y UCIN.",
+    keyPoints: [
+      "Pérdida de calor por 4 mecanismos",
+      "Factores anatómicos: piel fina, poca grasa",
+      "Producción de calor limitada sin grasa parda",
+      "Estrategias: bolsas plásticas, incubadoras húmedas",
+      "Importancia del ambiente térmico neutro",
+    ],
+    modelAnswer:
+      "Los prematuros extremos pierden calor rápidamente por múltiples factores: 1) ANATÓMICOS: piel muy fina (mayor permeabilidad y pérdida insensible), escaso tejido subcutáneo (aislante), área superficie/masa corporal elevada (mayor pérdida relativa), 2) FISIOLÓGICOS: grasa parda escasa (no producen calor por termogénesis química), tono muscular bajo (sin escalofríos), reservas glucógeno limitadas, 3) PÉRDIDA DE CALOR por 4 mecanismos: EVAPORACIÓN (principal en prematuros: piel permeable, pulmones), radiación (a superficies frías), convección (corrientes aire), conducción (superficies frías). HIPOTERMIA aumenta morbimortalidad: aumenta consumo O₂, acidosis metabólica, hipoglucemia, distrés respiratorio, hemorragia intraventricular. ESTRATEGIAS: SALA DE PARTOS: cuna de calor radiante precalentada (36-37°C), bolsa de polietileno transparente hasta cuello (reduce pérdida evaporativa 30%), gorro, temperatura ambiental 25-26°C, secar solo cara. UCIN: incubadora en modo húmedo (80-90% humedad primeras 2 semanas reduce pérdida insensible), temperatura aire según peso/edad (28-34°C), servocontrol cutáneo (objetivo 36.5-37.5°C), método canguro cuando estable. AMBIENTE TÉRMICO NEUTRO: rango de temperatura ambiental donde consumo de O₂ es mínimo, varía según peso y edad postnatal (ej: 800g día 1: 34-35°C).",
+  },
+  // DESARROLLO NEUROLÓGICO
+  {
+    id: 26,
+    question:
+      "Describe los hitos del desarrollo neurológico en los primeros 2 años de vida y explica por qué es importante la corrección por edad gestacional en prematuros. ¿Cuáles son las banderas rojas que indican derivación inmediata?",
+    keyPoints: [
+      "Hitos motores, lenguaje, social por edad",
+      "Corrección de edad en prematuros hasta 2 años",
+      "Banderas rojas por área de desarrollo",
+      "Importancia de detección temprana",
+      "Intervención temprana mejora pronóstico",
+    ],
+    modelAnswer:
+      "HITOS CLAVE: MOTORES: 2m (cabeza en prono), 4m (control cefálico), 6m (sentado con apoyo, volteos), 9m (sentado sin apoyo, gateo, pinza), 12m (bipedestación, marcha con apoyo, pinza fina), 18m (marcha independiente, sube escaleras con apoyo), 24m (corre, sube/baja escaleras). LENGUAJE: 2m (sonrisa social, arrullos), 6m (balbuceo), 9m (silabeo, señala), 12m (1-2 palabras, comprende órdenes simples), 18m (10-25 palabras, identifica partes del cuerpo), 24m (50+ palabras, frases 2 palabras). SOCIAL: 2m (sonrisa social), 6m (reconoce extraños), 9m (ansiedad separación), 12m (juego imitativo), 18m (juego simbólico). CORRECCIÓN EN PREMATUROS: restar semanas de prematuridad hasta edad 2 años porque el desarrollo sigue edad posmenstrual, no cronológica. Ej: prematuro 28 sem (12 sem adelantado) a los 6 meses cronológicos = 3 meses corregidos. BANDERAS ROJAS (derivar inmediatamente): 2m: no sonrisa social, no fija mirada, hipotonía/hipertonía severa. 4m: no control cefálico, no alcanza objetos. 6m: no voltea, no bisílabos. 9m: no sentado sin apoyo, asimetría motora, sin transferencia objetos. 12m: no bipedestación con apoyo, sin pinza, sin gesticulación, no dice 'mamá/papá'. 18m: no camina independiente, <6 palabras. 24m: no corre, <50 palabras, sin frases 2 palabras. Cualquier PÉRDIDA de habilidades (regresión) requiere evaluación urgente. Intervención temprana (estimulación, terapias) antes de 2 años aprovecha plasticidad cerebral y mejora significativamente pronóstico.",
   },
 ];
 
@@ -1951,6 +2860,458 @@ const clinicalCases = [
         correct: 1,
         explanation:
           "PREVENCIÓN de ROP (estrategias basadas en fisiopatología): 1) CONTROL ESTRICTO DE OXÍGENO: MANTENER SpO₂ en rango 90-95% (evitar HIPEROXIA que detiene vascularización en fase 1, Y evitar HIPOXIA que dispara VEGF excesivo en fase 2). Estudios (BOOST-II, SUPPORT): Rangos SpO₂ 91-95% vs 85-89%, rango más alto ↓ROP pero ↑mortalidad; balance óptimo ~90-95%. Ajustar FiO₂ frecuentemente según saturación. Destete GRADUAL de oxígeno (no cambios bruscos). 2) NUTRICIÓN ÓPTIMA: Prematuros con mejor crecimiento postnatal tienen MENOR ROP (IGF-1 baja asociada a ROP severa). Inicio precoz de nutrición parenteral, fortificación leche materna, suplementos proteicos. 3) MINIMIZAR COMORBILIDADES: Tratar sepsis, anemia (transfundir si Hb <12-13 en ventilación), evitar hipotermia, hipoglucemia (estrés aumenta VEGF). 4) LUZ AMBIENTAL: Evitar luz directa intensa a ojos (controvertido, estudios mixtos). 5) SCREENING OPORTUNO: Iniciar exámenes a 31 semanas EPM o 4 semanas vida (lo posterior) en <32 sem/<1500g. Repetir cada 1-2 semanas según hallazgos. NO previene ROP pero permite detección y tratamiento oportuno ANTES de ceguera. 6) EN INVESTIGACIÓN: Suplementos IGF-1, antioxidantes (vitamina E), propranolol (↓VEGF), anti-VEGF profiláctico (riesgo efectos sistémicos). AÚN NO recomendado rutinariamente. IMPACTO: Las mejoras en cuidado neonatal (oxígeno controlado, nutrición) han ↓ROP severa pero ↑sobrevida de prematuros extremos (25-26 sem) mantiene incidencia global. MENSAJE CLAVE: 'Oxígeno es droga': titular cuidadosamente según saturación objetivo.",
+      },
+    ],
+  },
+  // NUEVOS CASOS CLÍNICOS AGREGADOS
+  // CASO CLÍNICO: TETRALOGÍA DE FALLOT
+  {
+    id: 9,
+    title: "Caso Clínico: Neonato con Cianosis Central",
+    scenario: {
+      presentation:
+        "Recién nacido de 38 semanas presenta cianosis generalizada progresiva a las 6 horas de vida. Madre con control prenatal irregular, sin ecocardiografía fetal. Parto eutócico sin complicaciones, Apgar 8/9.",
+      vitals: {
+        "Frecuencia respiratoria": "55 rpm",
+        "Frecuencia cardíaca": "145 lpm",
+        "Saturación de O₂": "75% (no mejora con oxígeno al 100%)",
+        Temperatura: "37.0°C",
+        "Presión arterial": "65/40 mmHg",
+      },
+      physicalExam:
+        "Recién nacido con cianosis generalizada marcada, más evidente en labios y lecho ungueal. Pulsos periféricos normales. Soplo sistólico eyectivo grado III/VI en borde esternal izquierdo. No hepatomegalia. Resto del examen sin alteraciones.",
+      labs: "Gasometría arterial en aire ambiente: pH 7.36, pO₂ 45 mmHg, pCO₂ 38 mmHg, HCO₃ 21 mEq/L, SatO₂ 75%. Test de hiperoxia: pO₂ permanece <100 mmHg con FiO₂ 100%. Radiografía de tórax: corazón en forma de 'bota' (coeur en sabot), trama vascular pulmonar disminuida. Ecocardiografía: estenosis pulmonar severa, CIV grande, aorta cabalgante, hipertrofia ventricular derecha.",
+    },
+    questions: [
+      {
+        question: "¿Cuál es el diagnóstico?",
+        options: [
+          "Síndrome de dificultad respiratoria",
+          "Tetralogía de Fallot",
+          "Transposición de grandes arterias",
+          "Persistencia del conducto arterioso",
+        ],
+        correct: 1,
+        explanation:
+          "El diagnóstico es Tetralogía de Fallot, la cardiopatía congénita cianótica más frecuente. Se caracteriza por cuatro defectos: 1) estenosis pulmonar, 2) CIV grande, 3) aorta cabalgante, y 4) hipertrofia ventricular derecha. La cianosis que no mejora con oxígeno (test de hiperoxia negativo) indica cortocircuito derecha-izquierda a nivel cardíaco. La radiografía con corazón en 'bota' es característica.",
+      },
+      {
+        question: "¿Por qué la cianosis no mejora con oxígeno al 100%?",
+        options: [
+          "Porque tiene neumonía",
+          "Porque hay cortocircuito derecha-izquierda a nivel cardíaco (sangre desaturada pasa del ventrículo derecho al izquierdo sin pasar por los pulmones)",
+          "Porque los pulmones no funcionan",
+          "Porque tiene anemia severa",
+        ],
+        correct: 1,
+        explanation:
+          "La cianosis persiste con oxígeno porque es de origen cardíaco por cortocircuito derecha-izquierda. La estenosis pulmonar severa aumenta la resistencia al flujo pulmonar, lo que hace que la sangre desaturada del ventrículo derecho pase a través de la CIV hacia el ventrículo izquierdo y la aorta, sin oxigenarse en los pulmones. El oxígeno no puede corregir esta mezcla de sangre.",
+      },
+      {
+        question: "¿Qué tratamiento inicial requiere este paciente?",
+        options: [
+          "Surfactante pulmonar",
+          "Prostaglandina E1 si ductus-dependiente, posición genupectoral en crisis, betabloqueantes",
+          "Antibióticos de amplio espectro",
+          "Solo observación",
+        ],
+        correct: 1,
+        explanation:
+          "El tratamiento inicial incluye: 1) Prostaglandina E1 si la lesión es ductus-dependiente (para mantener flujo pulmonar), 2) Posición genupectoral si presenta crisis hipóxicas (aumenta resistencia vascular sistémica y disminuye cortocircuito D-I), 3) Betabloqueantes (propranolol) para prevenir crisis de hipoxia, 4) Corrección de anemia y deshidratación, 5) Oxígeno (aunque ayuda poco). La corrección quirúrgica total se realiza típicamente entre 3-6 meses.",
+      },
+    ],
+  },
+  // CASO CLÍNICO: GASTROSQUISIS
+  {
+    id: 10,
+    title: "Caso Clínico: Defecto de Pared Abdominal",
+    scenario: {
+      presentation:
+        "Recién nacido producto de embarazo de 37 semanas. Madre de 19 años, primigesta, con control prenatal completo. Ecografía prenatal del tercer trimestre reportó defecto de pared abdominal con evisceración intestinal. Parto por cesárea programada.",
+      vitals: {
+        "Frecuencia respiratoria": "50 rpm",
+        "Frecuencia cardíaca": "155 lpm",
+        "Saturación de O₂": "96%",
+        Temperatura: "36.2°C (tendencia a hipotermia)",
+      },
+      physicalExam:
+        "Recién nacido con defecto paraumbilical derecho de aproximadamente 3 cm. Evisceración de asas intestinales sin saco peritoneal que las cubra. Asas intestinales edematosas, engrosadas, cubiertas de fibrina. Cordón umbilical insertado a la izquierda del defecto, intacto. No se observan otras malformaciones evidentes. Resto del examen físico normal.",
+      labs: "Hemoglobina: 16 g/dL. Leucocitos: 12,000/mm³. Plaquetas: 250,000/mm³. Glucosa: 65 mg/dL. Electrolitos normales. Radiografía de abdomen: asas intestinales fuera de la cavidad abdominal, sin evidencia de perforación o neumoperitoneo.",
+    },
+    questions: [
+      {
+        question: "¿Cuál es el diagnóstico?",
+        options: [
+          "Onfalocele",
+          "Gastrosquisis",
+          "Hernia umbilical",
+          "Extrofia vesical",
+        ],
+        correct: 1,
+        explanation:
+          "El diagnóstico es gastrosquisis. Se caracteriza por: defecto paraumbilical (generalmente derecho), sin saco peritoneal cubriendo las vísceras, vísceras expuestas y edematosas por contacto prolongado con líquido amniótico, cordón umbilical con inserción normal (a la izquierda del defecto), generalmente es un defecto aislado sin otras malformaciones. Se diferencia del onfalocele que es central, tiene saco, y el cordón se inserta en el saco.",
+      },
+      {
+        question: "¿Cuál es el manejo inmediato en sala de partos?",
+        options: [
+          "Cubrir con compresas secas y proceder a cirugía inmediata",
+          "Envolver vísceras con gasas estériles húmedas tibias + plástico estéril, posición lateral derecha, sonda orogástrica, líquidos IV aumentados, antibióticos",
+          "No hacer nada, esperar evolución espontánea",
+          "Intentar reducir manualmente las vísceras",
+        ],
+        correct: 1,
+        explanation:
+          "El manejo inmediato incluye: 1) Envolver vísceras con gasas estériles húmedas y tibias + plástico estéril para prevenir pérdida de calor y líquidos, 2) Posicionar al RN en decúbito lateral derecho para evitar torsión vascular del mesenterio, 3) Colocar sonda orogástrica para descompresión gástrica, 4) Acceso venoso y líquidos IV aumentados (150-200 mL/kg/día) por grandes pérdidas insensibles, 5) Antibióticos profilácticos, 6) Mantener temperatura corporal, 7) NPO, 8) Traslado urgente a cirugía pediátrica.",
+      },
+      {
+        question: "¿Cuál es el tratamiento definitivo?",
+        options: [
+          "Cierre primario inmediato siempre",
+          "Reducción gradual con silo de silastic y cierre primario diferido en 5-7 días",
+          "Tratamiento médico conservador",
+          "Resección intestinal completa",
+        ],
+        correct: 1,
+        explanation:
+          "El tratamiento definitivo es la reducción gradual de las vísceras usando un silo de silastic (bolsa temporal) con cierre progresivo durante 5-7 días, hasta lograr que todas las vísceras entren en la cavidad abdominal y realizar cierre primario diferido de la pared. Esto previene el síndrome compartimental abdominal que ocurriría con cierre primario forzado. En casos seleccionados con defecto pequeño y cavidad abdominal adecuada, se puede intentar cierre primario inmediato. El pronóstico generalmente es bueno si no hay atresia intestinal asociada.",
+      },
+    ],
+  },
+  // NUEVOS CASOS CLÍNICOS - COBERTURA COMPLETA DEL PDF
+  // CASO CLÍNICO: SEPSIS NEONATAL TARDÍA
+  {
+    id: 11,
+    title: "Caso Clínico: Sepsis Neonatal Tardía",
+    scenario: {
+      presentation:
+        "Prematuro de 28 semanas, actualmente de 10 días de vida, 1100g peso actual. Tiene catéter central PICC y ha recibido nutrición parenteral. En las últimas 24 horas presenta: apneas frecuentes que requieren estimulación, inestabilidad térmica (36.0°C), intolerancia alimentaria con residuos gástricos biliosos, letargia y piel moteada.",
+      vitals: {
+        "Frecuencia cardíaca": "180 lpm (taquicardia)",
+        "Frecuencia respiratoria": "70 rpm con apneas",
+        "Saturación de O₂": "92% con O₂ suplementario",
+        Temperatura: "36.0°C",
+        "Presión arterial": "35/18 mmHg (hipotensión)",
+      },
+      physicalExam:
+        "Letárgico, piel moteada, llenado capilar 4 segundos, abdomen distendido con peristalsis disminuida, sitio de inserción PICC sin signos inflamatorios evidentes. Hipotonía generalizada.",
+      labResults: {
+        Hemograma:
+          "Leucocitos 3,000/μL (leucopenia), Neutrófilos 20% con 30% bandas (desviación izquierda marcada), Plaquetas 60,000/μL (trombocitopenia)",
+        "Proteína C reactiva": "12 mg/dL (marcadamente elevada)",
+        Glucosa: "45 mg/dL (hipoglucemia)",
+        Lactato: "4.5 mmol/L (acidosis láctica)",
+        Gasometría: "pH 7.28, HCO₃ 16 mEq/L (acidosis metabólica)",
+      },
+    },
+    questions: [
+      {
+        question: "¿Cuál es el diagnóstico más probable en este prematuro?",
+        options: [
+          "Síndrome de dificultad respiratoria",
+          "Sepsis neonatal tardía con probable origen en catéter central",
+          "Enterocolitis necrotizante",
+          "Crisis de apnea primaria del prematuro",
+        ],
+        correct: 1,
+        explanation:
+          "La presentación clínica es altamente sugestiva de sepsis neonatal tardía (>72h vida): deterioro agudo con apneas, inestabilidad térmica, intolerancia alimentaria, letargia, mala perfusión periférica, leucopenia con desviación izquierda marcada, trombocitopenia, PCR muy elevada, acidosis metabólica. El catéter central (PICC) es el factor de riesgo más importante para sepsis nosocomial. Aunque ECN es diferencial importante (distensión abdominal), la leucopenia y signos sistémicos severos apuntan más a sepsis.",
+      },
+      {
+        question:
+          "¿Cuáles son los agentes causales más probables en este escenario?",
+        options: [
+          "Estreptococo grupo B y E. coli",
+          "Estafilococos coagulasa-negativos, Staphylococcus aureus, bacilos gram negativos (Klebsiella, E. coli), Candida",
+          "Virus respiratorio sincitial",
+          "Listeria monocytogenes",
+        ],
+        correct: 1,
+        explanation:
+          "En sepsis neonatal TARDÍA (>72h) en prematuros hospitalizados con catéteres centrales, los agentes son: 1) Estafilococos coagulasa-negativos (40-50%, más común, bajo grado pero significativo en prematuros), 2) Staphylococcus aureus (10-15%, más virulento), 3) Bacilos gram negativos: Klebsiella, E. coli, Enterobacter (15-20%), 4) Candida (5-10%, especialmente con antibióticos prolongados, NP). EGB y E. coli son típicos de sepsis TEMPRANA vertical. El PICC es puerta de entrada ideal para estafilococos (colonización cutánea).",
+      },
+      {
+        question: "¿Cuál es el manejo INMEDIATO más apropiado?",
+        options: [
+          "Observación y reevaluación en 24 horas",
+          "Hemocultivos (central y periférico), PL, urocultivo, iniciar antibióticos empíricos (vancomicina + gentamicina o cefotaxima), soporte hemodinámico, considerar retirar catéter",
+          "Solo administrar oxígeno y líquidos",
+          "Transfusión de plaquetas únicamente",
+        ],
+        correct: 1,
+        explanation:
+          "MANEJO URGENTE: 1) CULTIVOS pre-antibióticos: Hemocultivos (2: uno del catéter central, otro periférico para diferenciar bacteriemia asociada a catéter), Urocultivo (cateterismo/punción suprapúbica), Punción lumbar (descartar meningitis, 25% de sepsis neonatales), 2) ANTIBIÓTICOS EMPÍRICOS inmediatos: Vancomicina (cubre estafilococos meticilino-resistentes) + Gentamicina o Cefotaxima (gram negativos). Si factores riesgo Candida (antibióticos >7 días, NP, cirugía abdominal): añadir anfotericina B, 3) SOPORTE HEMODINÁMICO: bolos SSN 10-20 mL/kg, dopamina/dobutamina si persiste hipotensión, corrección metabólica (glucosa, acidosis), 4) CATÉTER: Considerar retiro si: S. aureus, Candida, bacteriemia persistente >72h con tratamiento, inestabilidad hemodinámica. Ajustar antibióticos según cultivos. PRONÓSTICO: Mortalidad sepsis tardía 10-20% (mejor que temprana). Secuelas neurológicas en 20-30% de sobrevivientes (meningitis, leucomalacia).",
+      },
+    ],
+  },
+  // CASO CLÍNICO: ENCEFALOPATÍA HIPÓXICO-ISQUÉMICA
+  {
+    id: 12,
+    title: "Caso Clínico: Encefalopatía Hipóxico-Isquémica",
+    scenario: {
+      presentation:
+        "Recién nacido a término (39 semanas), 3200g. Parto vaginal complicado con DPPNI (desprendimiento prematuro de placenta), bradicardia fetal sostenida. Cesárea urgente. Al nacer: no respira, flácido, FC <60 lpm. Reanimación: ventilación con presión positiva (VPP) 2 minutos, compresiones cardíacas 3 minutos, intubación, adrenalina x1. Recupera FC y coloración a los 7 minutos. Apgar 1 (1min), 3 (5min), 5 (10min).",
+      vitals: {
+        "Frecuencia cardíaca": "145 lpm",
+        "Frecuencia respiratoria": "Ventilación mecánica",
+        "Saturación de O₂": "98% con ventilación",
+        Temperatura: "37.0°C (enfriamiento terapéutico iniciado)",
+        "Presión arterial": "45/28 mmHg",
+      },
+      physicalExam:
+        "A las 2 horas de vida: Nivel de conciencia disminuido (estupor), hipotonía marcada generalizada, reflejos primitivos ausentes (Moro, succión), pupilas mióticas con respuesta lenta a la luz. Movimientos espontáneos escasos. Convulsiones tónicas sutiles (extensión de extremidades, desviación ocular) a las 4 horas.",
+      labResults: {
+        "Gasometría cordón":
+          "pH 6.95, BE -18 mEq/L, lactato 12 mmol/L (acidosis metabólica severa)",
+        "Enzimas cardíacas": "Troponina I elevada (disfunción miocárdica)",
+        "Función renal":
+          "Creatinina 1.8 mg/dL, oliguria (insuficiencia renal aguda)",
+        EEG: "Patrón de voltaje bajo con actividad paroxística (compatible con convulsiones)",
+        "Ecografía cerebral":
+          "Normal inicialmente, edema cerebral aparece día 2-3",
+      },
+    },
+    questions: [
+      {
+        question:
+          "¿Cuál es la clasificación de severidad de esta encefalopatía?",
+        options: [
+          "Encefalopatía hipóxico-isquémica LEVE (Sarnat I)",
+          "Encefalopatía hipóxico-isquémica MODERADA (Sarnat II)",
+          "Encefalopatía hipóxico-isquémica SEVERA (Sarnat III)",
+          "No tiene encefalopatía",
+        ],
+        correct: 2,
+        explanation:
+          "CLASIFICACIÓN DE SARNAT: EHI LEVE (I): Hiperexcitabilidad, hipertonía leve, reflejos normales/aumentados, duración <24h, pronóstico excelente. EHI MODERADA (II): Letargia, hipotonía moderada, reflejos disminuidos pero presentes, convulsiones frecuentes, duración días-semanas, pronóstico variable (20-30% secuelas). EHI SEVERA (III): Estupor/coma, hipotonía severa/flacidez, reflejos ausentes (como este caso), convulsiones tempranas, falla multiorgánica, pronóstico malo (50% mortalidad, 75% secuelas severas en sobrevivientes). Este neonato tiene: estupor, hipotonía severa, reflejos ausentes, convulsiones, acidosis severa, falla multiorgánica → EHI SEVERA (Sarnat III). Criterios EHI: Evento perinatal hipóxico, Apgar <5 a 10min, acidosis severa (pH <7.0, BE <-12), manifestaciones neurológicas, falla multiorgánica.",
+      },
+      {
+        question:
+          "¿Cuál es el tratamiento NEUROPROTECTOR más importante dentro de las primeras 6 horas?",
+        options: [
+          "Antibióticos de amplio espectro",
+          "Hipotermia terapéutica (enfriamiento a 33.5-34.5°C durante 72 horas)",
+          "Surfactante pulmonar",
+          "Fototerapia intensiva",
+        ],
+        correct: 1,
+        explanation:
+          "La HIPOTERMIA TERAPÉUTICA es el único tratamiento neuroprotector con evidencia sólida para EHI moderada-severa. CRITERIOS: ≥36 semanas, <6 horas vida (ventana terapéutica crítica), EHI moderada o severa, evento perinatal hipóxico, pH <7.0 o BE <-16 o Apgar <5 a 10min. PROTOCOLO: Enfriar TODO el cuerpo (enfriamiento corporal total) a 33.5-34.5°C durante 72 horas, luego recalentar lentamente (0.5°C cada hora). MECANISMOS: Reduce metabolismo cerebral, disminuye excitotoxicidad por glutamato, inhibe apoptosis, reduce inflamación y edema, preserva autorregulación cerebral. BENEFICIOS: Reduce mortalidad 25%, reduce discapacidad severa/parálisis cerebral 30-40%. EFECTOS ADVERSOS: Bradicardia sinusal (normal, no tratar), coagulopatía, hipotensión leve, arritmias (raras). MONITOREO: EEG continuo (aEEG), temperatura central continua, soporte multiorgánico. Si >6 horas vida o EHI leve → NO enfriar.",
+      },
+      {
+        question:
+          "¿Qué complicaciones multiorgánicas son esperables en EHI severa?",
+        options: [
+          "Solo afecta el cerebro",
+          "Insuficiencia renal aguda, disfunción miocárdica/hipotensión, coagulopatía, hipoglucemia/SIHAD, enterocolitis",
+          "Solo afecta el hígado",
+          "Únicamente problemas respiratorios",
+        ],
+        correct: 1,
+        explanation:
+          "La asfixia perinatal causa daño MULTIORGÁNICO por hipoxia-isquemia global. ÓRGANOS AFECTADOS: 1) CEREBRO (100%): EHI, convulsiones, edema cerebral, secuelas neurológicas. 2) RIÑÓN (50%): Insuficiencia renal aguda (necrosis tubular aguda), oliguria, retención nitrogenados, hiperkalemia. Manejo: restricción líquidos, furosemida, diálisis si severa. 3) CORAZÓN (30-40%): Disfunción miocárdica (isquemia subendocárdica), hipotensión, shock cardiogénico, troponina elevada. Manejo: inotrópicos (dopamina, dobutamina). 4) HÍGADO (30%): Elevación transaminasas, coagulopatía (prolongación TP/TTPa), hipoglucemia. Manejo: vitamina K, plasma fresco si sangrado, monitoreo glucemia. 5) PULMÓN: Hipertensión pulmonar persistente (HPPRN) en 10-15%, requiere óxido nítrico. 6) INTESTINO (raro): Enterocolitis isquémica. 7) METABÓLICO: SIHAD (secreción inapropiada ADH) causa hiponatremia dilucional → restricción hídrica. 8) HEMATOLÓGICO: Coagulopatía, anemia. PRONÓSTICO: EHI severa: 50% mortalidad, 75% de sobrevivientes con secuelas graves (parálisis cerebral, epilepsia, discapacidad intelectual). RM cerebral días 3-7 es mejor predictor pronóstico.",
+      },
+    ],
+  },
+  // CASO CLÍNICO: ENTEROCOLITIS NECROTIZANTE
+  {
+    id: 13,
+    title: "Caso Clínico: Enterocolitis Necrotizante",
+    scenario: {
+      presentation:
+        "Prematuro de 27 semanas, 950g, actualmente 15 días de vida. Alimentación enteral mínima iniciada día 3 de vida (leche materna), progresión gradual, actualmente recibiendo 120 mL/kg/día (60% enteral, 40% parenteral). En las últimas 12 horas presenta: distensión abdominal progresiva, intolerancia alimentaria con residuos gástricos biliosos (30 mL), heces con sangre oculta positiva, apneas, letargia.",
+      vitals: {
+        "Frecuencia cardíaca": "175 lpm",
+        "Frecuencia respiratoria": "65 rpm con apneas",
+        "Saturación de O₂": "91%",
+        Temperatura: "36.5°C",
+        "Presión arterial": "38/20 mmHg (hipotensión leve)",
+      },
+      physicalExam:
+        "Abdomen marcadamente distendido, tenso, eritema de pared abdominal en cuadrante inferior derecho, ruidos intestinales ausentes, dolor a la palpación (llanto con estímulo mínimo). Piel moteada, llenado capilar 3-4 segundos.",
+      labResults: {
+        Hemograma: "Leucocitos 4,000/μL con 40% bandas, plaquetas 85,000/μL",
+        "Proteína C reactiva": "8 mg/dL",
+        Gasometría: "pH 7.30, BE -6 mEq/L (acidosis metabólica leve)",
+        "Radiografía abdomen":
+          "Marcada distensión de asas intestinales, neumatosis intestinal (gas intramural) en íleon, gas en vena porta",
+        Lactato: "3.8 mmol/L",
+      },
+    },
+    questions: [
+      {
+        question:
+          "¿Cuál es el estadio de enterocolitis necrotizante según clasificación de Bell?",
+        options: [
+          "Estadio IA (sospecha)",
+          "Estadio IIA (NEC definida, neumatosis sin perforación)",
+          "Estadio IIIB (NEC avanzada con perforación y peritonitis)",
+          "No tiene enterocolitis necrotizante",
+        ],
+        correct: 1,
+        explanation:
+          "CLASIFICACIÓN DE BELL MODIFICADA: ESTADIO I (SOSPECHA): IA: Distensión abdominal, residuos, sangre oculta heces, Rx normal. IB: Igual + sangrado rectal. ESTADIO II (NEC DEFINITIVA): IIA: Igual + neumatosis intestinal en Rx, ascitis leve. IIB: Igual + gas en vena porta, ascitis moderada. ESTADIO III (NEC AVANZADA): IIIA: IIA/B + peritonitis sin perforación, hipotensión, coagulopatía. IIIB: IIA/B + neumoperitoneo (perforación intestinal) → CIRUGÍA URGENTE. Este paciente tiene: distensión, residuos biliosos, sangre en heces, neumatosis intestinal, gas vena porta → ESTADIO IIB (NEC definitiva avanzada). NO hay neumoperitoneo (perforación) todavía. La neumatosis es gas producido por bacterias dentro de la pared intestinal (patognomónico de NEC). Gas en vena porta indica translocación bacteriana sistémica (peor pronóstico).",
+      },
+      {
+        question: "¿Cuál es el manejo MÉDICO inicial más apropiado?",
+        options: [
+          "Continuar alimentación enteral normalmente",
+          "NPO absoluto, descompresión nasogástrica, antibióticos triple (ampicilina + gentamicina + metronidazol), soporte hemodinámico, nutrición parenteral total, Rx seriadas cada 6-8h",
+          "Solo antibióticos sin cambiar alimentación",
+          "Cirugía inmediata en todos los casos",
+        ],
+        correct: 1,
+        explanation:
+          "MANEJO MÉDICO (estadios I-II sin perforación): 1) NPO ABSOLUTO: Suspender toda alimentación enteral (intestino necesita reposo), duración 7-14 días según evolución. 2) DESCOMPRESIÓN NASOGÁSTRICA: Sonda abierta drenaje continuo para evitar mayor distensión. 3) ANTIBIÓTICOS TRIPLE (10-14 días): Ampicilina (gram +) + Gentamicina (gram -) + Metronidazol o Clindamicina (anaerobios, especialmente Clostridium). Si sospecha resistencia: vancomicina + cefotaxima + metronidazol. 4) NUTRICIÓN PARENTERAL TOTAL: Para mantener crecimiento durante NPO. 5) SOPORTE HEMODINÁMICO: Bolos SSN, inotrópicos si shock, corrección acidosis, ventilación mecánica si deterioro respiratorio. 6) MONITOREO ESTRECHO: Rx abdomen cada 6-8h (detectar perforación=neumoperitoneo), examen abdominal frecuente (eritema de pared, defensa=cirugía), hemogramas, gases. 7) TRANSFUSIÓN: Plaquetas si <50,000, plasma si coagulopatía con sangrado. RESPUESTA: 70-80% mejoran con tratamiento médico en 48-72h (distensión disminuye, toleran alimentación gradual). 20-30% progresan a perforación (cirugía). CRITERIOS CIRUGÍA: Neumoperitoneo (perforación), paracentesis (+) bacterias/bilis, deterioro clínico progresivo a pesar de manejo óptimo, masa palpable fija (gangrena intestinal).",
+      },
+      {
+        question:
+          "¿Qué factores de riesgo tiene este paciente para desarrollar NEC?",
+        options: [
+          "Ningún factor de riesgo",
+          "Prematuridad extrema (<28 semanas), bajo peso (<1000g), alimentación enteral con progresión rápida, inmadurez intestinal",
+          "Solo la prematuridad",
+          "Únicamente el uso de fórmula",
+        ],
+        correct: 1,
+        explanation:
+          "FACTORES DE RIESGO PRINCIPALES: 1) PREMATURIDAD (más importante): 90% de NEC en prematuros, incidencia inversamente proporcional a EG: <28 sem=7-10%, 28-32 sem=3-5%, >32 sem=1-2%. 2) MUY BAJO PESO: <1500g (especialmente <1000g como este caso). 3) INMADUREZ INTESTINAL: Barrera mucosa deficiente, motilidad disminuida, autorregulación vascular pobre, sistema inmune inmaduro, microbiota anormal. 4) ALIMENTACIÓN ENTERAL: Riesgo aumenta con: fórmula (4x más que leche materna), progresión RÁPIDA (>20-30 mL/kg/día), hiperosmolaridad. Leche materna es PROTECTORA (reduce NEC 50-70%). 5) ISQUEMIA INTESTINAL: Asfixia perinatal, PDA, cardiopatías, policitemia, catéteres umbilicales. 6) COLONIZACIÓN PATOLÓGICA: Uso previo de antibióticos (altera microbiota), ambiente UCIN. 7) OTROS: Transfusiones sanguíneas (24-48h pre-NEC), corticoides postnatales (controversial), enterocolitis eosinofílica. PREVENCIÓN: Leche materna exclusiva, progresión enteral lenta y cautelosa (10-20 mL/kg/día), probióticos (reducen NEC 50% en algunos estudios: Lactobacillus, Bifidobacterium), nutrición trófica temprana (alimentación mínima días 1-5). PRONÓSTICO: Mortalidad global 20-30% (hasta 50% en estadio III). Sobrevivientes: 25% desarrollan estenosis intestinal a largo plazo (requiere cirugía), 30% síndrome intestino corto si resección extensa.",
+      },
+    ],
+  },
+  // CASO CLÍNICO: ICTERICIA CON COLESTASIS
+  {
+    id: 14,
+    title: "Caso Clínico: Ictericia Prolongada con Colestasis",
+    scenario: {
+      presentation:
+        "Lactante de 6 semanas de vida, nacido a término sin complicaciones perinatales. Los padres consultan porque 'sigue amarillo desde que nació' y han notado que las deposiciones son cada vez más pálidas (color masilla/blanquecinas) y la orina muy oscura (coluria). El pediatra había indicado fototerapia al alta (bilirrubina total 15 mg/dL día 3) con 'control ambulatorio', pero la ictericia persiste.",
+      vitals: {
+        "Frecuencia cardíaca": "135 lpm",
+        "Frecuencia respiratoria": "42 rpm",
+        Temperatura: "36.8°C",
+        Peso: "4.2 kg (percentil 25, sin falla de medro)",
+      },
+      physicalExam:
+        "Ictericia generalizada marcada (piel y escleras), abdomen: hepatomegalia 3 cm bajo reborde costal derecho, borde firme, esplenomegalia leve. Heces pálidas (acólicas) visualizadas en pañal. Orina oscura (coluria). No dismorfias, fontanela normotensa, desarrollo neurológico aparentemente normal.",
+      labResults: {
+        "Bilirrubina total": "18 mg/dL",
+        "Bilirrubina directa (conjugada)":
+          "12 mg/dL (>2 mg/dL o >20% de total = COLESTASIS)",
+        "Bilirrubina indirecta": "6 mg/dL",
+        Transaminasas: "AST 280 U/L, ALT 310 U/L (elevadas)",
+        "GGT (gamma-glutamil transferasa)": "550 U/L (muy elevada)",
+        "Fosfatasa alcalina": "750 U/L (elevada)",
+        Albúmina: "3.2 g/dL (baja-normal)",
+        "TP/INR": "TP 18 seg (prolongado), INR 1.8",
+        "Ecografía abdominal":
+          "Vesícula biliar pequeña, no se visualiza vía biliar extrahepática, hígado ecogénico",
+      },
+    },
+    questions: [
+      {
+        question: "¿Cuál es el diagnóstico más probable?",
+        options: [
+          "Ictericia fisiológica prolongada",
+          "Atresia de vías biliares",
+          "Hipotiroidismo congénito",
+          "Galactosemia",
+        ],
+        correct: 1,
+        explanation:
+          "La TRÍADA CLÁSICA de atresia biliar es: 1) ICTERICIA PROLONGADA con hiperbilirrubinemia DIRECTA (colestasis: BD >2 mg/dL o >20% de total), 2) HECES ACÓLICAS (pálidas/blancas, sin pigmento biliar), 3) COLURIA (orina oscura, bilirrubina conjugada se excreta por riñón). Además: hepatomegalia firme, GGT muy elevada (>5x normal, sugiere obstrucción biliar), vesícula pequeña/ausente en ecografía. ATRESIA BILIAR es la obliteración progresiva de vías biliares extrahepáticas (causa desconocida, probablemente viral/inflamatoria perinatal), llevando a colestasis, cirrosis y falla hepática si no se opera. Incidencia 1:10,000-15,000, más común en asiáticos y mujeres. TODO lactante con ictericia >2 semanas o con heces pálidas DEBE tener bilirrubina fraccionada (directa/indirecta) para detectar colestasis. DIFERENCIALES: Hepatitis neonatal idiopática (bilirrubina directa también alta pero vesícula NORMAL, GGT menos elevada, evolución más favorable). Otros: quiste de colédoco (vesícula grande, dilatación vía biliar), deficiencia alfa-1 antitripsina, síndrome Alagille, errores metabolismo.",
+      },
+      {
+        question:
+          "¿Cuál es la prueba diagnóstica confirmatoria y por qué es crítico el diagnóstico TEMPRANO?",
+        options: [
+          "Repetir bilirrubina en 1 mes, no hay urgencia",
+          "Gammagrafía hepatobiliar (HIDA) + colangiografía intraoperatoria. Cirugía (Kasai) debe realizarse ANTES de 60 días de vida para mejor pronóstico",
+          "Solo observación",
+          "Fototerapia intensiva",
+        ],
+        correct: 1,
+        explanation:
+          "El TIMING es CRÍTICO en atresia biliar: 1) La obstrucción biliar causa acumulación de ácidos biliares tóxicos que dañan progresivamente el hígado → CIRROSIS irreversible, 2) La PORTOENTEROSTOMÍA de KASAI (cirugía que conecta intestino a porta hepática para drenar bilis microscópica residual) tiene éxito variable según edad: <60 días vida: 60-80% logran flujo biliar, restauran bilirrubina normal; 60-90 días: 40-50% éxito; >90 días: <25% éxito (fibrosis/cirrosis avanzadas), 3) Incluso con Kasai exitoso, 50-60% eventualmente necesitan trasplante hepático (a 10-20 años), pero la cirugía temprana permite 'vivir con hígado propio' años-décadas, evitando trasplante en infancia, 4) Diagnóstico tardío (>90 días) → Kasai inefectivo → trasplante directo o muerte por falla hepática. Por eso TODO lactante con ictericia >2 semanas o con heces pálidas debe medirse BILIRRUBINA DIRECTA urgente. Regla nemotécnica: 'Too Yellow Too Long' (muy amarillo por mucho tiempo) = medir fraccionada. PRUEBAS DIAGNÓSTICAS: Gammagrafía HIDA (no excreción intestinal), colangiografía intraoperatoria (no vía biliar permeable, confirmatorio), biopsia hepática (proliferación ductal, fibrosis).",
+      },
+      {
+        question:
+          "¿Cuál es el manejo médico de soporte en colestasis neonatal?",
+        options: [
+          "No requiere tratamiento médico hasta la cirugía",
+          "Vitaminas liposolubles (A, D, E, K) dosis altas, fórmula con triglicéridos de cadena media (MCT), ácido ursodesoxicólico, monitoreo complicaciones",
+          "Solo antibióticos",
+          "Restricción de grasas completa",
+        ],
+        correct: 1,
+        explanation:
+          "El manejo médico de soporte en colestasis incluye: 1) VITAMINAS LIPOSOLUBLES (A, D, E, K) en dosis 2-10x normales: la falta de bilis intestinal impide absorción de grasas y vitaminas → deficiencia: K (hemorragia), D (raquitismo), E (neuropatía, hemólisis), A (ceguera nocturna). Monitorizar niveles séricos. 2) FÓRMULA CON TRIGLICÉRIDOS DE CADENA MEDIA (MCT): Los MCT se absorben sin necesidad de bilis, mejorando nutrición. 3) ÁCIDO URSODESOXICÓLICO (10-20 mg/kg/día): Ácido biliar hidrofílico que mejora flujo biliar, reduce prurito, protege hepatocitos. 4) MANEJO PRURITO: Rifampicina, colestiramina si prurito severo. 5) MONITOREO: Nutricional (curvas crecimiento), hepático (INR, albúmina, transaminasas), desarrollo. 6) PROFILAXIS INFECCIONES post-Kasai: Antibióticos para prevenir colangitis. Si cirrosis descompensada (ascitis, várices) → evaluar TRASPLANTE HEPÁTICO. PRONÓSTICO: sobrevida 10 años con hígado propio post-Kasai ~40-50%; con trasplante sobrevida >90%.",
+      },
+    ],
+  },
+  // CASO CLÍNICO: CRISIS HIPÓXICA EN TETRALOGÍA DE FALLOT
+  {
+    id: 15,
+    title: "Caso Clínico: Crisis Hipóxica ('Tet Spell')",
+    scenario: {
+      presentation:
+        "Lactante de 4 meses con diagnóstico prenatal de Tetralogía de Fallot (pendiente corrección quirúrgica programada para 6 meses). Los padres traen al bebé a urgencias porque durante episodio de llanto intenso (al cambiar pañal) desarrolló súbitamente: cianosis perioral y de extremidades que progresó rápidamente a cianosis generalizada severa, taquipnea marcada con respiración 'jadeante', el bebé se puso 'flácido' y 'como inconsciente' por 30 segundos. Recuperación parcial en ambulancia (los paramédicos colocaron al bebé con rodillas al pecho).",
+      vitals: {
+        "Frecuencia cardíaca": "180 lpm",
+        "Frecuencia respiratoria": "70 rpm (hiperpnea)",
+        "Saturación de O₂":
+          "65% en aire ambiente, 70% con O₂ 100% por mascarilla",
+        Temperatura: "37.2°C",
+        "Presión arterial": "65/35 mmHg",
+      },
+      physicalExam:
+        "Cianosis central severa persistente (labios, lengua, lecho ungueal), taquipnea con respiración profunda (hiperpnea), ansiedad extrema, diaforesis. Soplo sistólico eyectivo en borde esternal izquierdo bajo. Pulsos periféricos palpables. Posición genupectoral (rodillas al pecho) mejora ligeramente la cianosis.",
+      labResults: {
+        "Gasometría arterial":
+          "pH 7.32, PO₂ 38 mmHg, PCO₂ 28 mmHg (hipoxemia severa con hiperventilación compensatoria)",
+        "Saturación arterial": "65%",
+        Hematocrito: "52% (policitemia secundaria a hipoxemia crónica)",
+        "Ecocardiograma (previo)":
+          "Tetralogía de Fallot: CIV subaórtica grande, cabalgamiento aorta 50%, estenosis infundibular pulmonar severa, hipertrofia VD",
+      },
+    },
+    questions: [
+      {
+        question:
+          "¿Cuál es el diagnóstico de la crisis aguda y su fisiopatología?",
+        options: [
+          "Crisis asmática",
+          "Crisis hipóxica ('Tet spell'): Espasmo infundibular pulmonar aumenta obstrucción RVOT → mayor cortocircuito D→I por CIV → hipoxemia severa súbita",
+          "Neumonía",
+          "Convulsión",
+        ],
+        correct: 1,
+        explanation:
+          "CRISIS HIPÓXICA ('TET SPELL') en Tetralogía de Fallot: FISIOPATOLOGÍA: 1) FACTOR DESENCADENANTE (llanto, defecación, alimentación, fiebre, deshidratación) → 2) ESPASMO/CONTRACCIÓN INFUNDIBULAR: El tracto de salida VD (RVOT) ya estenótico se contrae aún más (músculo hipertrófico hipersensible), 3) OBSTRUCCIÓN SEVERA → flujo pulmonar cae drásticamente, 4) CORTOCIRCUITO D→I AUMENTA: Sangre desaturada del VD pasa masivamente por CIV hacia aorta (evitando pulmones), 5) HIPOXEMIA SEVERA SÚBITA (SatO₂ 50-70%), 6) HIPERPNEA (hiperventilación) intenta compensar pero empeora espasmo (disminuye retorno venoso), 7) CÍRCULO VICIOSO: hipoxemia → acidosis → más espasmo → más cortocircuito → más hipoxemia, 8) Puede llevar a SÍNCOPE, CONVULSIÓN HIPÓXICA, MUERTE si no se trata. EDAD TÍPICA: 2-6 meses (coincide con máxima hipertrofia VD). CLÍNICA: Cianosis súbita severa, taquipnea luego hiperpnea, irritabilidad/letargia, puede perder conciencia. MUY GRAVE: mortalidad 20-30% sin tratamiento.",
+      },
+      {
+        question: "¿Cuál es el manejo AGUDO de emergencia de esta crisis?",
+        options: [
+          "Fototerapia",
+          "Posición genupectoral, morfina, oxígeno, líquidos IV, bicarbonato, fenilefrina/propranolol IV, intubación si falla",
+          "Surfactante",
+          "Solo observación",
+        ],
+        correct: 1,
+        explanation:
+          "MANEJO SECUENCIAL DE CRISIS HIPÓXICA: 1) POSICIÓN GENUPECTORAL (rodillas al pecho) o CUCLILLAS: Aumenta resistencia vascular sistémica (comprime aorta/femorales) → disminuye cortocircuito D→I → más flujo pulmonar → mejora oxigenación. 2) CALMAR AL NIÑO: Reducir llanto/agitación (aumenta consumo O₂ y espasmo). Madre/padre lo carga. 3) OXÍGENO 100%: Aunque ayuda poco (problema es de flujo, no ventilación), puede mejorar algo. 4) MORFINA 0.1-0.2 mg/kg IV/IM/SC: Sedación suave, disminuye taquipnea y espasmo infundibular. 5) LÍQUIDOS IV (bolo 10-20 mL/kg SSN): Aumenta precarga → aumenta volumen VD → distiende infundíbulo (menos obstrucción), aumenta resistencia sistémica. 6) BICARBONATO DE SODIO: Corrige acidosis metabólica (rompe círculo vicioso). 7) FENILEFRINA IV (alfa-agonista): Aumenta resistencia vascular sistémica (vasoconstricción) → reduce cortocircuito D→I. Alternativa: PROPRANOLOL IV 0.05-0.1 mg/kg (beta-bloqueador, relaja infundíbulo). 8) INTUBACIÓN + VENTILACIÓN si falla tratamiento médico. 9) CIRUGÍA URGENTE: Si crisis refractaria → shunt paliativo urgente (Blalock-Taussig) o corrección total. PREVENCIÓN: Propranolol oral crónico 2-4 mg/kg/día (previene crisis), cirugía electiva temprana (3-6 meses), mantener hidratación.",
+      },
+      {
+        question:
+          "¿Por qué la cirugía correctiva debe realizarse tempranamente?",
+        options: [
+          "No es urgente, puede esperar hasta adolescencia",
+          "Para prevenir crisis hipóxicas (mortalidad 20-30%), hipoxemia crónica causa policitemia/hiperviscosidad (ACV), abscesos cerebrales, deterioro neurocognitivo, endocarditis",
+          "Solo por razones estéticas",
+          "La Tetralogía se cura espontáneamente",
+        ],
+        correct: 1,
+        explanation:
+          "INDICACIONES CIRUGÍA TEMPRANA (3-6 meses típicamente): 1) PREVENIR CRISIS HIPÓXICAS: Mortalidad 20-30% por crisis, riesgo de muerte súbita. Frecuencia aumenta 2-6 meses. 2) PREVENIR COMPLICACIONES HIPOXEMIA CRÓNICA: a) POLICITEMIA/HIPERVISCOSIDAD: Hematocrito >65% → sangre 'espesa' → trombosis, ACV (5% de pacientes no operados). b) ABSCESOS CEREBRALES: Bacteriemia evita filtro pulmonar (cortocircuito D→I) → siembra cerebral. Mortalidad 30-40%. c) DETERIORO NEUROCOGNITIVO: Hipoxemia crónica daña desarrollo cerebral → CI bajo, problemas aprendizaje. d) ENDOCARDITIS BACTERIANA: Flujo turbulento. e) FALLA CARDÍACA: Hipertrofia VD progresiva → disfunción ventricular. 3) MEJORAR CALIDAD DE VIDA: Intolerancia ejercicio, cianosis, fatigabilidad. CIRUGÍA CORRECTIVA: Cierre CIV (parche) + resección/ampliación RVOT (elimina obstrucción). RESULTADOS: Mortalidad quirúrgica <3%, sobrevida largo plazo >90%, la mayoría vive vida normal. Sin cirugía: 50% mueren antes 3 años, 90% antes 20 años. SEGUIMIENTO POST-OP: Arritmias (bloqueo rama derecha, TV), insuficiencia pulmonar residual (puede requerir reemplazo válvula pulmonar en adolescencia/adulto).",
       },
     ],
   },
