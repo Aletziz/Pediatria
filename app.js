@@ -333,14 +333,14 @@ function loadJustQuestion() {
                     <h4 class="font-bold text-green-800 mb-2">
                         <i class="fas fa-check-circle mr-2"></i>Tu Respuesta:
                     </h4>
-                    <p class="text-gray-700 whitespace-pre-wrap">${userAnswer}</p>
+                    <p class="text-gray-700 whitespace-pre-wrap break-words overflow-wrap-anywhere max-w-full">${userAnswer}</p>
                 </div>
                 
                 <div class="bg-purple-50 border-l-4 border-purple-500 p-4">
                     <h4 class="font-bold text-purple-800 mb-2">
                         <i class="fas fa-star mr-2"></i>Respuesta Modelo:
                     </h4>
-                    <p class="text-gray-700 whitespace-pre-wrap">${question.modelAnswer}</p>
+                    <p class="text-gray-700 whitespace-pre-wrap break-words overflow-wrap-anywhere max-w-full">${question.modelAnswer}</p>
                 </div>
             </div>
         `;
